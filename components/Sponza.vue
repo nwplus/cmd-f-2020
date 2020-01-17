@@ -3,8 +3,18 @@
     <p class="sponsor-title">
       Sponsors
     </p>
+    <div id="sponzaButtonContainer">
+      <img
+        src="~/assets/graphics/leafLeft.svg"
+      >
+      <button id="sponzaButton">
+        Become a Sponsor
+      </button>
+      <img
+        src="~/assets/graphics/leafRight.svg"
+      >
+    </div>
     <br>
-
     <div id="sponsors-list" class="sponsorCategory">
       <div v-for="item in listOfTera" :key="item.name" class="sponsorWrapper">
         <SponsorImage :item="item" />
@@ -73,14 +83,34 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import url('https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap');
 @import "bulma/bulma.sass";
 $heading-font: "Caveat Brush";
 //Desktop CSS:
-.becomeSponsor {
+
+#sponzoButtonWrapper {
+  display: inline-block;
+  margin: auto;
+}
+#sponzaButton {
+  vertical-align: top;
   transition-duration: 0.3s;
   width: auto;
+  background: #2F4246;
+  border-radius: 120px;
+  color: white;
+  margin: auto 10px;
+  margin-top: 10px;
+  width: 311px;
+  height: 48px;
+  font-family: Zilla Slab;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.3em;
+  line-height: 31px;
+  color: #E9E8E0;
 }
-.becomeSponsor:hover {
+#sponzaButton:hover {
   transform: scale(1.1);
 }
 h2 {
@@ -89,16 +119,13 @@ h2 {
   line-height: 60px;
 }
 .sponsor-title {
-  font-family: Apercu Pro;
+  font-family: Zilla Slab;
+  font-style: normal;
+  font-weight: bold;
   font-size: 36px;
   line-height: 37px;
   letter-spacing: 0.05em;
-  font-weight: bold;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  background: -webkit-linear-gradient(180deg, #91e9ee 0%, #06c1c0 100%);
+  color: #2F4246;
   margin-bottom: 20px;
 }
 .sponsorCategory {
@@ -117,6 +144,11 @@ h2 {
 }
 //Mobile CSS:
 @include until($tablet) {
+  #sponzaButton {
+  width: 50%;
+  height: 48px;
+  font-size: 1em;
+  }
   .sponsorCategory {
     flex-direction: column;
   }
