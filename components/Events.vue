@@ -6,7 +6,7 @@
     <div class="subText">
       cmd-f was established according to our 3 main values:
     </div>
-    <div class="columns is-3-tablet">
+    <div class="no-overflow columns is-3-tablet">
       <div v-for="item in sortedEvents" :key="item.order">
         <div
           class="events column"
@@ -48,6 +48,7 @@ export default {
 
 .events {
   text-align: center;
+  padding: 0;
 }
 
 .images {
@@ -79,8 +80,11 @@ export default {
   margin-bottom: 30px;
 }
 @include until($tablet){
+  .no-overflow {
+    max-width: 100vw;
+  }
   .mainContainer {
-  margin: 0% 15px 50px 15px;
+    margin: 0% 10% 50px 10%;
   }
 }
 </style>
