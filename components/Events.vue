@@ -78,4 +78,9 @@ export default {
   text-align: center;
   margin-bottom: 30px;
 }
+@include until($tablet){
+  .mainContainer {
+  margin: 0% 15px 50px 15px;
+  }
+}
 </style>
