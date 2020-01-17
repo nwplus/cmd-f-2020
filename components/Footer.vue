@@ -101,6 +101,7 @@ svg:hover path {
 @include until ($tablet) {
   .footer-content {
     font-size: 12px;
+    background: linear-gradient(180.6deg, #E9E8E0 0.51%, #2F4246 40.63%);
   }
   .links a {
     margin: 10px;
