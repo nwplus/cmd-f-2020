@@ -43,7 +43,7 @@ export default {
 @import "bulma/bulma.sass";
 @import url('https://fonts.googleapis.com/css?family=Arapey|Zilla+Slab:400,700&display=swap');
 .mainContainer {
-  margin: 0% 15% 50px 15%;
+  margin: 0% auto 50px auto;
 }
 
 .events {
@@ -77,18 +77,5 @@ export default {
   color: #2F4246;
   text-align: center;
   margin-bottom: 30px;
-}
-
-@include until($desktop) {
-  .mainContainer {
-    margin: 0% 2% 50px 2%;
-  }
-}
-
-@include until($tablet) {
-  .mainContainer {
-    margin: 0% 9% 50px 9%;
-  }
-
 }
 </style>
