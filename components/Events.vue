@@ -11,7 +11,7 @@
         <div
           class="events column"
         >
-          <img class="images" :src="item.imageLink">
+          <img :src="item.imageLink" class="images">
           <div class="title">
             {{ item.title }}
           </div>
@@ -77,5 +77,10 @@ export default {
   color: #2F4246;
   text-align: center;
   margin-bottom: 30px;
+}
+@include until($tablet){
+  .mainContainer {
+  margin: 0% 15px 50px 15px;
+  }
 }
 </style>
