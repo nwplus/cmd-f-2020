@@ -148,7 +148,7 @@ h2 {
 @include until($tablet) {
   #sponzaButton {
   width: 50%;
-  height: 48px;
+  height: 45px;
   font-size: 1em;
   }
   .sponsorCategory {
