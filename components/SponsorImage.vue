@@ -32,6 +32,7 @@ export default {
 @import "bulma/bulma.sass";
 
 img {
+  margin: auto;
   display: block;
   transition-duration: 0.3s;
 }
@@ -75,6 +76,7 @@ img:hover {
   img {
     display: inline;
     max-width: 200px !important;
+        min-width: unset !important;
   }
 }
 </style>
