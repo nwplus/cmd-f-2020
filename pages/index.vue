@@ -1,7 +1,7 @@
 <template>
   <div id="main-page" style="position: relative; width: 100%;">
     <NavBar v-if="screenWidth > 768" id="navbar" :faq="faqFlag" />
-    <section class="mainSection">
+    <section id="mainSection">
       <div class="mainContent">
         <Intro id="intro" :intro="intro" />
         <Events id="events" :items="events" />
@@ -84,5 +84,11 @@ export default {
 }
 #main-page {
   background-color: #e9e8e0;
+}
+@include from($tablet) {
+    #mainSection {
+    transform: scale(0.85);
+    margin: auto;
+  }
 }
 </style>
