@@ -85,7 +85,7 @@ export default {
 #main-page {
   background-color: #e9e8e0;
 }
-@include from($desktop) {
+@include from($tablet) {
     #mainSection {
     transform: scale(0.85);
     margin: auto;
