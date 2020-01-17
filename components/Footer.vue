@@ -1,15 +1,11 @@
 <template>
   <div class="footer-content">
+    <img class="footer-image" src="">
+    <br>
     <p class="join-us-section">
       nwPlus is always looking for new ventures, opportunities, and connections. If you are interested in working with us, joining us or speaking at one of our events, feel free to reach out to us at
       <a class="mail-to" href="mailto:hello@nwplus.io">hello@nwplus.io</a>
     </p>
-    <img src="/backgroundSvg/footer_graphic.svg">
-    <div id="footer-social">
-      <div id="social">
-        <p>Social Here</p>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -33,7 +29,6 @@ export default {
 .footer-content {
   text-align: center;
   min-width: 90vw;
-  background: linear-gradient(180.6deg, #E9E8E0 0.51%, #2F4246 73.63%);
 }
 .footer-image {
     max-width: 90%;
@@ -41,21 +36,7 @@ export default {
 .join-us-section {
     width: 70%;
     margin: 25px auto;
-    color: #FFFFFF;
-    padding-top: 200px;
-    padding-bottom: 100px;
-}
-#footer-social {
-  position: absolute;
-  bottom: 9vw;
-  right: 50%;
-}
-#social {
-  position: relative;
-  right: -50%;
-  text-align: center;
-  min-width: 90vw;
-  margin-top: -25%;
+    color: #69DDE1;
 }
 .mail-to {
     color: white;
