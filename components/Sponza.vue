@@ -7,9 +7,11 @@
       <img
         src="~/assets/graphics/leafLeft.svg"
       >
-      <button id="sponzaButton">
-        Become a Sponsor
-      </button>
+      <a href="mailto:logistics@nwplus.io?subject=CMD-F Sponsorship">
+        <button id="sponzaButton">
+          Become a Sponsor
+        </button>
+      </a>
       <img
         src="~/assets/graphics/leafRight.svg"
       >
