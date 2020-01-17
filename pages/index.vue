@@ -1,12 +1,12 @@
 <template>
   <div id="main-page" style="position: relative; width: 100%;">
-    <NavBar v-if="screenWidth > 768" id="navbar" :faq="faqFlag" />
+    <NavBar id="navbar" v-if="screenWidth > 768" :faq="faqFlag" />
     <section id="mainSection">
       <div class="mainContent">
         <Intro id="intro" :intro="intro" />
         <Events id="events" :items="events" />
-        <FAQ v-if="faqFlag" id="faq" :items="FAQs" />
-        <Sponza v-if="sponsorFlag" id="sponza" :items="sponsors" />
+        <FAQ id="faq" v-if="faqFlag" :items="FAQs" />
+        <Sponza id="sponza" v-if="sponsorFlag" :items="sponsors" />
       </div>
     </section>
     <Footer :text="footer" />

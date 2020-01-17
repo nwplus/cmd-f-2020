@@ -1,5 +1,5 @@
 <template>
-  <div class="header" :class="{visible: isTimeout}">
+  <div :class="{visible: isTimeout}" class="header">
     <div class="header-content" />
   </div>
 </template>

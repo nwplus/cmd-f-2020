@@ -1,5 +1,5 @@
 <template>
-  <a class="link" :href="formatURL(item.url)" target="_blank" rel="noopener noreferrer">
+  <a :href="formatURL(item.url)" class="link" target="_blank" rel="noopener noreferrer">
     <img
       :class="{[item.rank]: true}"
       :src="item.imageURL"

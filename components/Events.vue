@@ -11,7 +11,7 @@
         <div
           class="events column"
         >
-          <img class="images" :src="item.imageLink">
+          <img :src="item.imageLink" class="images">
           <div class="title">
             {{ item.title }}
           </div>
