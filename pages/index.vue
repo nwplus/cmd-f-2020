@@ -1,12 +1,12 @@
 <template>
   <div id="main-page" style="position: relative; width: 100%;">
-    <NavBar id="navbar" v-if="screenWidth > 768" :faq="faqFlag" />
+    <NavBar v-if="screenWidth > 768" id="navbar" :faq="faqFlag" />
     <section id="mainSection">
       <div class="mainContent">
         <Intro id="intro" :intro="intro" />
         <Events id="events" :items="events" />
-        <FAQ id="faq" v-if="faqFlag" :items="FAQs" />
-        <Sponza id="sponza" v-if="sponsorFlag" :items="sponsors" />
+        <FAQ v-if="faqFlag" id="faq" :items="FAQs" />
+        <Sponza v-if="sponsorFlag" id="sponza" :items="sponsors" />
       </div>
     </section>
     <Footer :text="footer" />
@@ -79,15 +79,18 @@ export default {
 @import "bulma/bulma.sass";
 //Desktop CSS:
 @font-face {
-  font-family: "Apercu Pro";
-  src: url("../assets/fonts/apercu_regular_pro.otf") format("opentype");
+  font-family: 'Zilla Slab';
+  src: url(https://fonts.gstatic.com/s/zillaslab/v5/dFa6ZfeM_74wlPZtksIFajo6_Q.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Arapey';
+  src: url(https://fonts.gstatic.com/s/arapey/v8/-W__XJn-UDDA2RCKYNod.woff2) format('woff2');
 }
 #main-page {
   background-color: #e9e8e0;
 }
 @include from($tablet) {
-    #mainSection {
-    transform: scale(0.85);
+  #mainSection {
     margin: auto;
   }
 }

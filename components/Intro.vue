@@ -6,7 +6,7 @@
           alt="cmd-f logo"
           src="../assets/nwlogos/cmdf.svg"
         >
-        <p>March 07-08, 2020</p>
+        <p><strong>March 07-08, 2020</strong></p>
         <p>Vancouver’s all-female* hackathon</p>
         <button>Apply Now</button>
       </div>
@@ -36,13 +36,12 @@ export default {
 
 <style lang="scss" scoped>
 @import "bulma/bulma.sass";
-.signupText {
-  max-width: 60%;
-  text-align: center;
-  margin: 0 20%;
-}
 .header {
+  font-family: 'Zilla Slab';
+  color: #2F4246;
   opacity: 0;
+  font-size: 23px;
+  font-weight: normal;
   transition: opacity 400ms linear 0ms;
   min-height: 157vw; // this is 2272 / 1440 (svg dimensions)
   background-position: left top;
