@@ -8,7 +8,7 @@
         >
         <p><strong>March 07-08, 2020</strong></p>
         <p>Vancouver’s all-female* hackathon</p>
-        <button>Apply Now</button>
+        <a><button>Apply Now</button></a>
       </div>
     </div>
   </div>
@@ -54,13 +54,33 @@ export default {
 .visible {
   opacity: 1;
 }
+.header button {
+  vertical-align: top;
+  transition-duration: 0.3s;
+  width: auto;
+  background: #2F4246;
+  border-radius: 120px;
+  border: none;
+  color: white;
+  margin-top: 10px;
+  width: 311px;
+  height: 48px;
+  font-family: Zilla Slab;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 23px;
+  color: #E9E8E0;
+}
+.header button:hover {
+  background: #969D8D;
+}
 //Desktop CSS:
 @include from($desktop) {
   .header {
     background-image: url("~@/assets/header.svg");
   }
   .header-content {
-    padding: 30vw 14vw 0 0;
+    padding: 31vw 14vw 0 0;
   }
 }
 //Mobile CSS:
