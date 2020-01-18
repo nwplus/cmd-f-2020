@@ -1,6 +1,16 @@
 <template>
-  <div :class="{visible: isTimeout}" class="header">
-    <div class="header-content" />
+  <div class="header" :class="{visible: isTimeout}">
+    <div class="header-content">
+      <div>
+        <img
+          alt="cmd-f logo"
+          src="../assets/nwlogos/cmdf.svg"
+        >
+        <p>March 07-08, 2020</p>
+        <p>Vancouver’s all-female* hackathon</p>
+        <button>Apply Now</button>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -8,12 +18,6 @@
 
 export default {
   props: {
-    shadowValues: {
-      type: String,
-      default: () => {
-        return '0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.8 0'
-      }
-    },
     isTimeout: {
       type: Boolean,
       default: () => {
@@ -25,7 +29,7 @@ export default {
   mounted: function () {
     setTimeout(() => {
       this.isTimeout = true
-    }, 600)
+    }, 300)
   }
 }
 </script>
@@ -39,21 +43,14 @@ export default {
 }
 .header {
   opacity: 0;
-  transition: opacity 600ms linear 0ms;
-  min-height: 105vw; // the bg image is _almost_ a square
+  transition: opacity 400ms linear 0ms;
+  min-height: 157vw; // this is 2272 / 1440 (svg dimensions)
   background-position: left top;
   background-repeat: no-repeat;
   background-size: 100vw;
 }
-.billboard #billboard {
-  fill: #fff;
-  transition: fill .2s ease;
-}
-.billboard:hover #white-glow {
-  opacity: 100%;
-}
-.billboard:hover #billboard {
-  fill: #FFD154;
+.header-content {
+  text-align: right;
 }
 .visible {
   opacity: 1;
@@ -61,9 +58,10 @@ export default {
 //Desktop CSS:
 @include from($desktop) {
   .header {
+    background-image: url("~@/assets/header.svg");
   }
   .header-content {
-    padding: 24vw 0 0 68vw;
+    padding: 30vw 14vw 0 0;
   }
 }
 //Mobile CSS:
