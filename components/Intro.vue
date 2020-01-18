@@ -43,7 +43,7 @@ export default {
   font-size: 23px;
   font-weight: normal;
   transition: opacity 400ms linear 0ms;
-  min-height: 157vw; // this is 2272 / 1440 (svg dimensions)
+  min-height: 82vw; // this is 1188 / 1440 * 100 (svg dimensions)
   background-position: left top;
   background-repeat: no-repeat;
   background-size: 100vw;
