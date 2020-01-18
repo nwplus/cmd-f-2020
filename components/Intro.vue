@@ -86,8 +86,6 @@ export default {
 .subheader {
   min-height: 100vh;
   color: white;
-  background: url("~@/assets/graphics/clouds.svg") left top no-repeat, linear-gradient(#2F4246, #E9E8E0 130%);
-  background-size: 100vw;
 }
 .subheader-content {
   max-width: 900px;
@@ -102,6 +100,10 @@ export default {
   .header-content {
     padding: 31vw 14vw 0 0;
   }
+  .subheader {
+    background: url("~@/assets/graphics/clouds.svg") left top no-repeat, linear-gradient(#2F4246, #E9E8E0 130%);
+    background-size: 100vw;
+  }
 }
 //Mobile CSS:
 @include until($desktop) {
@@ -110,6 +112,10 @@ export default {
   }
   .header-content {
     padding: 90vw 0 0 59vw;
+  }
+  .subheader {
+    background: url("~@/assets/graphics/clouds-mobile.svg") left top no-repeat, #2F4246;
+    background-size: 100vw;
   }
 }
 </style>
