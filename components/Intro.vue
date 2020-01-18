@@ -1,14 +1,21 @@
 <template>
-  <div class="header" :class="{visible: isTimeout}">
-    <div class="header-content">
-      <div>
-        <img
-          alt="cmd-f logo"
-          src="../assets/nwlogos/cmdf.svg"
-        >
-        <p><strong>March 07-08, 2020</strong></p>
-        <p>Vancouver’s all-female* hackathon</p>
-        <a><button>Apply Now</button></a>
+  <div class="intro-section">
+    <div class="header" :class="{visible: isTimeout}">
+      <div class="header-content">
+        <div>
+          <img
+            alt="cmd-f logo"
+            src="../assets/nwlogos/cmdf.svg"
+          >
+          <p><strong>March 07-08, 2020</strong></p>
+          <p>Vancouver’s all-female* hackathon</p>
+          <a><button>Apply Now</button></a>
+        </div>
+      </div>
+    </div>
+    <div class="subheader">
+      <div class="subheader-content">
+        <p>Join us on <strong>International Women*'s Day</strong> at British Columbia's first and largest all-female* hackathon to explore new technologies and celebrate women* in tech.</p>
       </div>
     </div>
   </div>
@@ -36,14 +43,16 @@ export default {
 
 <style lang="scss" scoped>
 @import "bulma/bulma.sass";
-.header {
+.intro-section {
   font-family: 'Zilla Slab';
   color: #2F4246;
-  opacity: 0;
   font-size: 23px;
   font-weight: normal;
+}
+.header {
+  opacity: 0;
   transition: opacity 400ms linear 0ms;
-  min-height: 82vw; // this is 1188 / 1440 * 100 (svg dimensions)
+  min-height: 74vw; // this is svg dimensions
   background-position: left top;
   background-repeat: no-repeat;
   background-size: 100vw;
@@ -73,6 +82,17 @@ export default {
 }
 .header button:hover {
   background: #969D8D;
+}
+.subheader {
+  min-height: 100vh;
+  color: white;
+  background: url("~@/assets/graphics/clouds.svg") left top no-repeat, linear-gradient(#2F4246, #E9E8E0 130%);
+  background-size: 100vw;
+}
+.subheader-content {
+  max-width: 900px;
+  padding-top: 30vw;
+  margin: auto;
 }
 //Desktop CSS:
 @include from($desktop) {
