@@ -3,19 +3,7 @@
     <p class="sponsor-title">
       Sponsors
     </p>
-    <div id="sponzaButtonContainer">
-      <img
-        src="~/assets/graphics/leafLeft.svg"
-      >
-      <a href="mailto:logistics@nwplus.io?subject=CMD-F Sponsorship">
-        <button id="sponzaButton">
-          Become a Sponsor
-        </button>
-      </a>
-      <img
-        src="~/assets/graphics/leafRight.svg"
-      >
-    </div>
+    <BecomeSponsorButton />
     <br>
     <div id="sponsors-list" class="sponsorCategory">
       <div v-for="item in listOfTera" :key="item.name" class="sponsorWrapper">
@@ -56,8 +44,9 @@
 
 <script>
 import SponsorImage from '~/components/SponsorImage'
+import BecomeSponsorButton from '~/components/becomeSponsorButton'
 export default {
-  components: { SponsorImage },
+  components: { SponsorImage, BecomeSponsorButton },
   props: {
     items: {
       type: Array,
@@ -90,31 +79,6 @@ export default {
 $heading-font: "Caveat Brush";
 //Desktop CSS:
 
-#sponzoButtonWrapper {
-  display: inline-block;
-  margin: auto;
-}
-#sponzaButton {
-  vertical-align: top;
-  transition-duration: 0.3s;
-  width: auto;
-  background: #2F4246;
-  border-radius: 120px;
-  color: white;
-  margin: auto 10px;
-  margin-top: 10px;
-  width: 311px;
-  height: 48px;
-  font-family: Zilla Slab;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 1.3em;
-  line-height: 31px;
-  color: #E9E8E0;
-}
-#sponzaButton:hover {
-  transform: scale(1.1);
-}
 h2 {
   font-family: $heading-font;
   font-size: 48px;
@@ -146,11 +110,6 @@ h2 {
 }
 //Mobile CSS:
 @include until($tablet) {
-  #sponzaButton {
-  width: 50%;
-  height: 45px;
-  font-size: 1em;
-  }
   .sponsorCategory {
     flex-direction: column;
   }
