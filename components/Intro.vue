@@ -17,6 +17,14 @@
       <div class="subheader-content">
         <p>Join us on <strong>International Women*'s Day</strong> at British Columbia's first and largest all-female* hackathon to explore new technologies and celebrate women* in tech.</p>
       </div>
+      <div class="subheader-content-body">
+        <p id="subheader-body-main">
+          We're here to break stereotypes and create a safe space for women* where they can learn new skills, build confidence, and discover a supportive community. Whether you're a first time hacker or a veteran, we want to help you take your next steps in tech. Come join us for a fun weekend of hacking with amazing workshops, social events, and food!
+        </p>
+        <p id="acknowledgement">
+          * The cmd-f team would like to acknowledge that "female" or "women" is not an accurate description for many people and may make some feel unwelcome. We use * to include cis and trans women, as well as non-binary, agender and intersex people.
+        </p>
+      </div>
     </div>
   </div>
 </template>
@@ -48,6 +56,24 @@ export default {
   color: #2F4246;
   font-size: 23px;
   font-weight: normal;
+}
+.subheader-content-body {
+  font-family: 'Arapey';
+  color: #E9E8E0;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.subheader-content-body p#subheader-body-main:first-letter {
+  font-size: 3em;
+}
+.subheader-content-body p#subheader-body-main:first-line {
+  line-height: 1em;
+}
+.subheader-content-body #acknowledgement {
+  color: #FFB5A6;
+  font-size: 16px;
+  max-width: 184px;
 }
 .header {
   opacity: 0;
@@ -104,6 +130,15 @@ export default {
     background: url("~@/assets/graphics/clouds.svg") left top no-repeat, linear-gradient(#2F4246, #E9E8E0 130%);
     background-size: 100vw;
   }
+  .subheader-content-body {
+    max-width: 525px;
+    display: flex;
+    flex-direction: row;
+    margin: 40px auto;
+  }
+  .subheader-content-body p#subheader-body-main {
+  max-width: 315px;
+}
 }
 //Mobile CSS:
 @include until($desktop) {
