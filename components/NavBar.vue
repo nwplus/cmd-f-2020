@@ -19,13 +19,13 @@
             <a v-scroll-to="'#events'" href="#" class="navbar-item">About</a>
             <a v-if="faq" v-scroll-to="'#faq'" href="#" class="navbar-item">FAQ</a>
             <a v-scroll-to="'#sponza'" href="#" class="navbar-item">Sponsors</a>
-            <a href="https://2019.nwhacks.io/#/" rel="noopener" target="_blank" class="navbar-item">nwHacks 2019</a>
+            <a href="https://cmd-f.nwplus.io/" rel="noopener" target="_blank" class="navbar-item">2020</a>
           </div>
           <a v-scroll-to="'#intro'" href="#" target="_blank" rel="noopener">
             <img
               id="navbar-logo"
               class="navbar-item"
-              src="~@/assets/nwlogos/nwHacks_Logo.svg"
+              src="~@/assets/nwlogos/nwplus-logo.png"
               alt="nwPlus logo"
             >
           </a>
@@ -79,6 +79,8 @@ export default {
 @import "bulma/bulma.sass";
 
 .navbar {
+  font-family: 'Zilla Slab', serif;
+  font-weight: bold;
   background: none;
   color: rgba(1, 1, 1, 0);
   position: fixed;
@@ -96,7 +98,7 @@ export default {
     text-decoration: none;
     font-size: 18px;
     padding: 0px 32px;
-    color: #fff;
+    color: #2F4246;
     padding-top: 15px;
 }
 .navbar-item::after {
@@ -104,7 +106,7 @@ export default {
     display: block;
     width: 0;
     height: 2px;
-    background: #fff;
+    background: #2F4246;
     transition: width .3s;
 }
 .navbar-item:hover::after {
@@ -114,7 +116,7 @@ a.navbar-item:hover,
 a.navbar-item:focus,
 a.navbar-item:focus-within {
   background: none;
-  color: #fff
+  color: #2F4246
 }
 .buttons {
   margin-right: 78px;
