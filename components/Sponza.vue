@@ -31,14 +31,6 @@
       </div>
     </div>
     <!--  -->
-    <a href="mailto:sponsorship@nwplus.io">
-      <img
-        class="becomeSponsor"
-        src=""
-        style="margin-top: 15px;"
-        title="Become a Sponsor"
-      >
-    </a>
   </div>
 </template>
 
