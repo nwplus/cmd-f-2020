@@ -79,9 +79,9 @@ h2 {
 .sponsor-title {
   font-family: Zilla Slab;
   font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
+  font-size: 48px;
   line-height: 37px;
+  font-weight: bold;
   letter-spacing: 0.05em;
   color: #2F4246;
   margin-bottom: 20px;
