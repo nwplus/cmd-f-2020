@@ -1,12 +1,14 @@
 <template>
   <div id="main-page" style="position: relative; width: 100%;">
-    <NavBar id="navbar" v-if="screenWidth > 768" :faq="faqFlag" />
+    <NavBar v-if="screenWidth > 768" id="navbar" :faq="faqFlag" />
     <section id="mainSection">
       <div class="mainContent">
         <Intro id="intro" :intro="intro" />
         <Events id="events" :items="events" />
-        <FAQ id="faq" v-if="faqFlag" :items="FAQs" />
-        <Sponza id="sponza" v-if="sponsorFlag" :items="sponsors" />
+        <img src="~@/assets/branch.png" class="branch">
+        <FAQ v-if="faqFlag" id="faq" :items="FAQs" />
+        <img src="~@/assets/birdAndBranch.png" class="bird-branch">
+        <Sponza v-if="sponsorFlag" id="sponza" :items="sponsors" />
       </div>
     </section>
     <Footer :text="footer" />
@@ -89,6 +91,33 @@ export default {
     #mainSection {
     transform: scale(0.85);
     margin: auto;
+  }
+}
+.branch-image-container {
+  position: relative;
+}
+.branch {
+  margin-left: -10%;
+  margin-top: -8%;
+  width: 40%;
+}
+.bird-branch {
+  margin-left: 70%;
+  margin-top: -5%;
+  margin-bottom: -100px;
+  width: 40%;
+}
+//Mobile CSS:
+@include until($tablet) {
+  .branch {
+    margin-left: 0;
+    width: 60%;
+  }
+  .bird-branch {
+    margin-left: 45%;
+    width: 60%;
+    margin-top: 0px;
+    margin-bottom: -50px;
   }
 }
 </style>
