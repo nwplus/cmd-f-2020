@@ -19,9 +19,9 @@
             <a v-scroll-to="'#events'" href="#" class="navbar-item">About</a>
             <a v-if="faq" v-scroll-to="'#faq'" href="#" class="navbar-item">FAQ</a>
             <a v-scroll-to="'#sponza'" href="#" class="navbar-item">Sponsors</a>
-            <a href="https://cmd-f.nwplus.io/" rel="noopener" target="_blank" class="navbar-item">2020</a>
+            <a href="https://cmd-f.nwplus.io/" rel="noopener" target="_blank" class="navbar-item">2019</a>
           </div>
-          <a v-scroll-to="'#intro'" href="#" target="_blank" rel="noopener">
+          <a href="https://www.nwplus.io/" target="_blank" rel="noopener">
             <img
               id="navbar-logo"
               class="navbar-item"
