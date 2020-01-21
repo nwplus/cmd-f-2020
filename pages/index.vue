@@ -1,14 +1,14 @@
 <template>
   <div id="main-page" style="position: relative; width: 100%;">
-    <NavBar v-if="screenWidth > 768" id="navbar" :faq="faqFlag" />
+    <NavBar id="navbar" v-if="screenWidth > 768" :faq="faqFlag" />
     <section id="mainSection">
       <div class="mainContent">
         <Intro id="intro" :intro="intro" />
         <Events id="events" :items="events" />
         <img src="~@/assets/branch.png" class="branch">
-        <FAQ v-if="faqFlag" id="faq" :items="FAQs" />
+        <FAQ id="faq" v-if="faqFlag" :items="FAQs" />
         <img src="~@/assets/birdAndBranch.png" class="bird-branch">
-        <Sponza v-if="sponsorFlag" id="sponza" :items="sponsors" />
+        <Sponza id="sponza" v-if="sponsorFlag" :items="sponsors" />
       </div>
     </section>
     <Footer :text="footer" />
@@ -117,7 +117,7 @@ export default {
     margin-left: 45%;
     width: 60%;
     margin-top: 0px;
-    margin-bottom: -50px;
+    margin-bottom: 0;
   }
 }
 </style>
