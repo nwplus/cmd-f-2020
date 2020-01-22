@@ -57,12 +57,22 @@ export default {
   font-size: 23px;
   font-weight: normal;
 }
+.subheader-content p {
+  text-align: center;
+  line-height: 34px;
+  max-width: 740px;
+  margin: 0 auto;
+  font-size: 28px;
+}
 .subheader-content-body {
   font-family: 'Arapey';
   color: #E9E8E0;
   font-size: 20px;
   font-weight: normal;
   line-height: 25px;
+}
+.subheader-content-body p#subheader-body-main {
+  margin-right: 12px;
 }
 
 .subheader-content-body p#subheader-body-main:first-letter {
@@ -77,6 +87,8 @@ export default {
   color: #FFB5A6;
   font-size: 16px;
   max-width: 184px;
+  line-height: 20px;
+  margin-left: 12px;
 }
 .header {
   opacity: 0;
