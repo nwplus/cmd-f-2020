@@ -34,11 +34,11 @@ export default {
 img {
   margin: auto;
   display: block;
-  transition-duration: 0.3s;
+  transition-duration: 0.2s;
 }
 
 img:hover {
-  transform: scale(1.1);
+  transform: scale(1.08);
 }
 
 .tera {
