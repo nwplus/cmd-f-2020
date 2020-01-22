@@ -16,18 +16,17 @@
 @import "bulma/bulma.sass";
 #sponzaButton {
   text-decoration: none;
-  transition-duration: 0.3s;
+  transition-duration: 0.2s;
   position: relative;
   bottom: 30px;
   background: #2F4246;
   border-radius: 120px;
-  padding: 6px 30px;
+  padding: 14px 50px;
   color: white;
-  margin: auto 10px;
+  margin: auto 24px;
   font-family: Zilla Slab;
-  font-style: normal;
   font-weight: 600;
-  font-size: 1.3em;
+  font-size: 24px;
   line-height: 31px;
   color: #E9E8E0;
 }
