@@ -167,5 +167,20 @@ export default {
     background: url("~@/assets/graphics/clouds-mobile.svg") left top no-repeat, #2F4246;
     background-size: 100vw;
   }
+  .subheader-content p {
+  line-height: 22px;
+  max-width: 350px;
+  font-size: 18px;
+  }
+
+  .subheader-content-body {
+    max-width: 325px;
+    margin: 10px auto;
+  }
+
+  .subheader-content-body #acknowledgement {
+    max-width: 325px;
+    margin: 10px auto;
+  }
 }
 </style>
