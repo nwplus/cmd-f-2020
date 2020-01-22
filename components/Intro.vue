@@ -62,13 +62,16 @@ export default {
   color: #E9E8E0;
   font-size: 20px;
   font-weight: normal;
+  line-height: 25px;
 }
 
 .subheader-content-body p#subheader-body-main:first-letter {
-  font-size: 3em;
-}
-.subheader-content-body p#subheader-body-main:first-line {
-  line-height: 1em;
+  font-size: 2.9em;
+  display: block;
+  float: left;
+  line-height: .6;
+  margin-right: 1px;
+  margin-top: 7px;
 }
 .subheader-content-body #acknowledgement {
   color: #FFB5A6;
