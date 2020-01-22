@@ -1,9 +1,9 @@
 <template>
-  <div id="sponzaButtonContainer">
+  <div>
     <img
       src="~/assets/graphics/leafLeft.svg"
     >
-    <a id="sponzaButton" href="mailto:logistics@nwplus.io?subject=CMD-F Sponsorship">
+    <a id="sponzaButton" href="mailto:logistics@nwplus.io?subject=cmd-f Sponsorship">
       Become a Sponsor
     </a>
     <img
@@ -14,15 +14,6 @@
 
 <style scoped lang="scss">
 @import "bulma/bulma.sass";
-#sponzahref {
-    width: 100%;
-    height: 100%;
-}
-
-#sponzoButtonWrapper {
-  display: inline-block;
-  margin: auto;
-}
 #sponzaButton {
   text-decoration: none;
   transition-duration: 0.3s;
@@ -30,7 +21,7 @@
   bottom: 30px;
   background: #2F4246;
   border-radius: 120px;
-  padding: 10px 50px;
+  padding: 6px 30px;
   color: white;
   margin: auto 10px;
   font-family: Zilla Slab;
