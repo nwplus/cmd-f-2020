@@ -5,7 +5,9 @@
       <div class="mainContent">
         <Intro id="intro" :intro="intro" />
         <Events id="events" :items="events" />
+        <img src="~@/assets/branch.png" class="branch">
         <FAQ v-if="faqFlag" id="faq" :items="FAQs" />
+        <img src="~@/assets/birdAndBranch.png" class="bird-branch">
         <Sponza v-if="sponsorFlag" id="sponza" :items="sponsors" />
       </div>
     </section>
@@ -92,6 +94,33 @@ export default {
 @include from($tablet) {
   #mainSection {
     margin: auto;
+  }
+}
+.branch-image-container {
+  position: relative;
+}
+.branch {
+  margin-left: -10%;
+  margin-top: -8%;
+  width: 40%;
+}
+.bird-branch {
+  margin-left: 70%;
+  margin-top: -5%;
+  margin-bottom: -100px;
+  width: 40%;
+}
+//Mobile CSS:
+@include until($tablet) {
+  .branch {
+    margin-left: 0;
+    width: 60%;
+  }
+  .bird-branch {
+    margin-left: 45%;
+    width: 60%;
+    margin-top: 0px;
+    margin-bottom: 0;
   }
 }
 </style>
