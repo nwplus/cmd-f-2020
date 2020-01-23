@@ -25,6 +25,10 @@
           * The cmd-f team would like to acknowledge that "female" or "women" is not an accurate description for many people and may make some feel unwelcome. We use * to include cis and trans women, as well as non-binary, agender and intersex people.
         </p>
       </div>
+      <img
+        alt="graphic under about section"
+        src="../assets/graphics/about-bottom.svg"
+      >
     </div>
   </div>
 </template>
@@ -171,6 +175,7 @@ export default {
   line-height: 22px;
   max-width: 350px;
   font-size: 18px;
+  margin: 20px auto;
   }
 
   .subheader-content-body {
