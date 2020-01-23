@@ -15,6 +15,11 @@
     </div>
     <div class="subheader">
       <div class="subheader-content">
+        <img
+          id="white-logo"
+          alt="cmd-f logo in white"
+          src="../assets/nwlogos/cmdf-white.svg"
+        >
         <p>Join us on <strong>International Women*'s Day</strong> at British Columbia's first and largest all-female* hackathon to explore new technologies and celebrate women* in tech.</p>
       </div>
       <div class="subheader-content-body">
@@ -67,6 +72,12 @@ export default {
   max-width: 740px;
   margin: 0 auto;
   font-size: 28px;
+}
+.subheader-content #white-logo {
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 20px;
+  max-height: 77px;
 }
 .subheader-content-body {
   font-family: 'Arapey';
@@ -148,6 +159,10 @@ export default {
   .subheader {
     background: url("~@/assets/graphics/clouds.svg") left top no-repeat, linear-gradient(#2F4246, #E9E8E0 130%);
     background-size: 100vw;
+  }
+  .subheader-content #white-logo {
+    margin-bottom: 56px;
+    max-height: 150px;
   }
   .subheader-content-body {
     max-width: 525px;
