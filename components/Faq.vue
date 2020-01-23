@@ -12,7 +12,7 @@
         </p>
         <div v-for="item in sortedItems" :key="`General-${item.question}`">
           <div v-if="item.selected && item.category == 'General'">
-            <button @click="openSesame" class="accordion">
+            <button class="accordion" @click="openSesame">
               {{ item.question }}
             </button>
             <div class="panel">
@@ -31,7 +31,7 @@
         </p>
         <div v-for="item in items" :key="`Teams-${item.question}`">
           <div v-if="item.selected && item.category == 'Teams'">
-            <button @click="openSesame" class="accordion">
+            <button class="accordion" @click="openSesame">
               {{ item.question }}
             </button>
             <div class="panel">
@@ -46,7 +46,7 @@
         </p>
         <div v-for="item in items" :key="`Logistics-${item.question}`">
           <div v-if="item.selected && item.category == 'Logistics'">
-            <button @click="openSesame" class="accordion">
+            <button class="accordion" @click="openSesame">
               {{ item.question }}
             </button>
             <div class="panel">

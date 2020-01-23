@@ -1,14 +1,14 @@
 <template>
   <div id="main-page" style="position: relative; width: 100%;">
-    <NavBar id="navbar" v-if="screenWidth > 768" :faq="faqFlag" />
+    <NavBar v-if="screenWidth > 768" id="navbar" :faq="faqFlag" />
     <section id="mainSection">
       <div class="mainContent">
         <Intro id="intro" :intro="intro" />
         <Events id="events" :items="events" />
         <img src="~@/assets/branch.png" class="branch">
-        <FAQ id="faq" v-if="faqFlag" :items="FAQs" />
+        <FAQ v-if="faqFlag" id="faq" :items="FAQs" />
         <img src="~@/assets/birdAndBranch.png" class="bird-branch">
-        <Sponza id="sponza" v-if="sponsorFlag" :items="sponsors" />
+        <Sponza v-if="sponsorFlag" id="sponza" :items="sponsors" />
       </div>
     </section>
     <Footer :text="footer" />
