@@ -149,7 +149,7 @@ export default {
   margin: auto;
 }
 //Desktop CSS:
-@include from($desktop) {
+@include from($tablet) {
   .header {
     background-image: url("~@/assets/header.svg");
   }
@@ -175,7 +175,7 @@ export default {
 }
 }
 //Mobile CSS:
-@include until($desktop) {
+@include until($tablet) {
   .header {
     min-height: 264vw; // the bg image is height compared to width
   }
