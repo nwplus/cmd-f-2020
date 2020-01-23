@@ -1,14 +1,9 @@
 <template>
   <a :href="formatURL(item.url)" class="link" target="_blank" rel="noopener noreferrer">
     <img
-      :class="{hasAlt: item.altImageUrl, [item.rank]: true, default: !item.altImageUrl}"
+      :class="{[item.rank]: true}"
       :src="item.imageURL"
       :alt="item.name"
-    >
-    <img
-      v-if="item.altImageUrl"
-      :class="{[item.rank]: true, altImage: true}"
-      :src="item.altImageUrl"
     >
   </a>
 </template>
@@ -35,55 +30,44 @@ export default {
 </script>
 <style scoped lang="scss">
 @import "bulma/bulma.sass";
-.default {
-  transition: 0.5s, -moz-filter 0.5s, -o-filter 0.5s, filter 0.5s;
-  filter: brightness(0) invert(1);
-}
+
 img {
+  margin: auto;
   display: block;
+  transition-duration: 0.2s;
 }
-.default:hover {
-  filter: none;
+
+img:hover {
+  transform: scale(1.08);
 }
-.link {
-  display: block;
-  position: relative;
-}
-.link img {
-  transition: 0.5s, -moz-filter 0.5s, -o-filter 0.5s, filter 0.5s;
-}
-.link .hasAlt {
-  opacity: 0;
-}
-.link:hover .hasAlt {
-  opacity: 1;
-}
-.link .altImage {
-  top: 0;
-  left: 0;
-  position: absolute;
-  opacity: 1;
-}
-.link:hover .altImage {
-  opacity: 0;
-}
+
 .tera {
+  min-height: 210px;
+  min-width: 350px;
   max-width: 400px;
   max-height: 260px;
 }
 .giga {
+  min-height: 190px;
+  min-width: 310px;
   max-width: 360px;
   max-height: 240px;
 }
 .mega {
+  min-height: 170px;
+  min-width: 270px;
   max-width: 320px;
   max-height: 220px;
 }
 .kilo {
+  min-height: 150px;
+  min-width: 230px;
   max-width: 280px;
   max-height: 200px;
 }
 .in-kind {
+  min-height: 130px;
+  min-width: 190px;
   max-width: 240px;
   max-height: 180px;
 }
@@ -92,6 +76,7 @@ img {
   img {
     display: inline;
     max-width: 200px !important;
+        min-width: unset !important;
   }
 }
 </style>
