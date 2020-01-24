@@ -148,7 +148,7 @@ export default {
   right: -50%;
   text-align: center;
   min-width: 90vw;
-  margin-top: -25%;
+  margin-top: -30%;
 }
 .mail-to {
     color: white;
@@ -171,7 +171,7 @@ export default {
 
 .copyright-text {
   color: #2F4246;
-  width: 18%;
+  width: 25%;
   margin: 0 auto;
   font-size: 20px;
   font-family: Arapey;
@@ -214,11 +214,9 @@ svg:hover path {
 
 //Mobile CSS:
 @include until ($desktop) {
-    .links {
-      margin: 7px;
-    }
+  .links {
+    margin: 7px;
   }
-@include until ($tablet) {
   .footer-content {
     font-size: 12px;
     background: linear-gradient(180.6deg, #E9E8E0 0.51%, #2F4246 40.63%);
@@ -237,7 +235,7 @@ svg:hover path {
   .join-us-section {
     width: 85%;
     margin: 40px auto;
-    padding-top: 500px;
+    padding-top: 200px;
   }
   .copyright-text {
     color: #EEEDDB;
@@ -248,6 +246,14 @@ svg:hover path {
   }
   #footer-social {
     bottom: 60vw;
+  }
+}
+
+@include until ($tablet) {
+  .join-us-section {
+    width: 85%;
+    margin: 40px auto;
+    padding-top: 500px;
   }
 }
 </style>
