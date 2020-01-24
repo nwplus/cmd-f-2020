@@ -169,6 +169,7 @@ export default {
     display: flex;
     flex-direction: row;
     margin: 40px auto;
+    margin-bottom: 0;
   }
   .subheader-content-body p#subheader-body-main {
   max-width: 315px;
