@@ -20,7 +20,7 @@
           alt="cmd-f logo in white"
           src="../assets/nwlogos/cmdf-white.svg"
         >
-        <p>Join us on <strong>International Women*'s Day</strong> at British Columbia's first and largest all-female* hackathon to explore new technologies and celebrate women* in tech.</p>
+        <p>Join us on International Women*'s Day at British Columbia's first and largest all-female* hackathon to explore new technologies and celebrate women* in tech.</p>
       </div>
       <div class="subheader-content-body">
         <p id="subheader-body-main">
@@ -31,9 +31,11 @@
         </p>
       </div>
       <img
+        id="about-bottom-graphic"
         alt="graphic under about section"
         src="../assets/graphics/about-bottom.svg"
       >
+      <!-- <div class="light-background" /> -->
     </div>
   </div>
 </template>
@@ -78,6 +80,9 @@ export default {
   display: block;
   margin-bottom: 20px;
   max-height: 77px;
+}
+#about-bottom-graphic {
+  position: absolute;
 }
 .subheader-content-body {
   font-family: 'Arapey';
@@ -142,6 +147,7 @@ export default {
 .subheader {
   min-height: 100vh;
   color: white;
+  padding-bottom: 30%;
 }
 .subheader-content {
   max-width: 900px;
