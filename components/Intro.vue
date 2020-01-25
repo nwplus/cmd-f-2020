@@ -106,7 +106,7 @@ export default {
 .subheader-content-body #acknowledgement {
   color: #FFB5A6;
   font-size: 16px;
-  max-width: 184px;
+  min-width: 184px;
   line-height: 20px;
   margin-left: 12px;
 }
@@ -177,9 +177,6 @@ export default {
     margin: 40px auto;
     margin-bottom: 0;
   }
-  .subheader-content-body p#subheader-body-main {
-  max-width: 315px;
-}
 }
 //Mobile CSS:
 @include until($tablet) {
@@ -195,18 +192,20 @@ export default {
   }
   .subheader-content p {
   line-height: 22px;
-  max-width: 350px;
+  min-width: 350px;
+  width: 80%;
   font-size: 18px;
   margin: 20px auto;
   }
 
   .subheader-content-body {
-    max-width: 325px;
+    min-width: 325px;
+    width: 80%;
     margin: 10px auto;
   }
 
   .subheader-content-body #acknowledgement {
-    max-width: 325px;
+    width: 100%;
     margin: 10px auto;
   }
 }
