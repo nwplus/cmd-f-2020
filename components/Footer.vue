@@ -8,7 +8,7 @@
       <img class="moon" src="~@/assets/moon.svg" alt="">
       <img class="stars" src="~@/assets/stars.svg" alt="">
     </div>
-    <img src="/backgroundSvg/footer_graphic.svg">
+    <img id="footerBackgroundImage" src="/backgroundSvg/footer_graphic.svg">
     <div id="footer-social">
       <div id="social">
         <p>
@@ -210,6 +210,10 @@ svg path {
 
 svg:hover path {
   fill: #969D8D;
+}
+
+#footerBackgroundImage {
+  width: 100vw;
 }
 
 //Mobile CSS:
