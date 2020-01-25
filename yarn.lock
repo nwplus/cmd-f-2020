@@ -7393,7 +7393,7 @@ node-object-hash@^1.2.0:
   resolved "https://registry.yarnpkg.com/node-object-hash/-/node-object-hash-1.4.2.tgz#385833d85b229902b75826224f6077be969a9e94"
   integrity sha512-UdS4swXs85fCGWWf6t6DMGgpN/vnlKeSGEQ7hJcrs7PBFoxoKLmibc3QRb7fwiYsjdL7PX8iI/TMSlZ90dgHhQ==
 
-node-pre-gyp@*, node-pre-gyp@^0.14.0:
+node-pre-gyp@^0.14.0:
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/node-pre-gyp/-/node-pre-gyp-0.14.0.tgz#9a0596533b877289bcad4e143982ca3d904ddc83"
   integrity sha512-+CvDC7ZttU/sSt9rFjix/P05iS43qHCOOGzcr3Ry99bXG7VX953+vFyEuph/tfqoYu8dttBkE86JSKBO2OzcxA==
@@ -10910,6 +10910,14 @@ vue-jest@^3.0.3:
     tsconfig "^7.0.0"
     vue-template-es2015-compiler "^1.6.0"
 
+vue-kinesis@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/vue-kinesis/-/vue-kinesis-1.0.4.tgz#bbf8f2ace8fcae03bea1f88a8026472bd527303a"
+  integrity sha512-X66NIA+GzLi0Tu5KKHOKStdYMZd+fAjF/vb3KasWmpP949mRbmHLDrEVFy57ls7Q9WIilY29q8ksMbZ9C7j59g==
+  dependencies:
+    core-js "^2.6.5"
+    vue "^2.6.10"
+
 vue-loader@^15.8.3:
   version "15.8.3"
   resolved "https://registry.yarnpkg.com/vue-loader/-/vue-loader-15.8.3.tgz#857cb9e30eb5fc25e66db48dce7e4f768602a23c"
@@ -10987,7 +10995,7 @@ vue-template-es2015-compiler@^1.6.0, vue-template-es2015-compiler@^1.9.0:
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
 
-vue@^2.1.10, vue@^2.6.11:
+vue@^2.1.10, vue@^2.6.10, vue@^2.6.11:
   version "2.6.11"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.11.tgz#76594d877d4b12234406e84e35275c6d514125c5"
   integrity sha512-VfPwgcGABbGAue9+sfrD4PuwFar7gPb1yl1UK1MwXoQPAw0BKSqWfoYCT/ThFrdEVWoI51dBuyCoiNU9bZDZxQ==
