@@ -4,9 +4,15 @@
       <div :class="{visible: isTimeout}" class="header">
         <div class="header-content">
           <div>
+            <div class="mobile-h1-wrapper">
+              <h1 class="mobile-h1">
+                change the norm
+              </h1>
+            </div>
             <img
               alt="cmd-f logo"
               src="../assets/nwlogos/cmdf.svg"
+              style="display: block"
             >
             <p><strong>March 07-08, 2020</strong></p>
             <p>Vancouver’s all-female* hackathon</p>
@@ -125,6 +131,11 @@ export default {
   font-weight: normal;
   background-color: #2F4246;
 }
+.mobile-h1 {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 40px;
+}
 .subheader-content {
   position: relative;
 }
@@ -220,6 +231,9 @@ export default {
 }
 //Desktop CSS:
 @include from($tablet) {
+  .mobile-h1 {
+    display: block
+  }
   .header {
     background-image: url("~@/assets/header.svg");
   }
@@ -247,11 +261,25 @@ export default {
 }
 //Mobile CSS:
 @include until($tablet) {
+  .mobile-h1 {
+    display: inline
+  }
+  .intro-section {
+    font-size: 16px;
+  }
+  .header button {
+    font-size: 16px;
+    width: 40vw;
+    height: 36px;
+  }
   .header {
-    min-height: 264vw; // the bg image is height compared to width
+    background-image: url("~@/assets/mobile-header.svg");
+    min-height: 170vw; // the bg image is height compared to width
   }
   .header-content {
-    padding: 90vw 0 0 59vw;
+    text-align: left;
+    padding: 33vw 0 0 4vw;
+    width: 40vw;
   }
   .subheader {
     background: url("~@/assets/graphics/clouds-mobile.svg") left top no-repeat,linear-gradient(#2F4246, #E9E8E0 160%);
