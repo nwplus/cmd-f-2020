@@ -157,9 +157,6 @@ export default {
   font-weight: normal;
   line-height: 25px;
 }
-.subheader-content-body p#subheader-body-main {
-  margin-right: 12px;
-}
 
 .subheader-content-body p#subheader-body-main:first-letter {
   font-size: 2.9em;
@@ -236,6 +233,9 @@ export default {
     margin-bottom: 56px;
     max-height: 150px;
   }
+  .subheader-content-body p#subheader-body-main {
+  margin-right: 12px;
+}
   .subheader-content-body {
     max-width: 525px;
     display: flex;
