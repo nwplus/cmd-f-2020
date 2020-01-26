@@ -12,7 +12,6 @@
             <img
               alt="cmd-f logo"
               src="../assets/nwlogos/cmdf.svg"
-              style="display: block"
             >
             <p><strong>March 07-08, 2020</strong></p>
             <p>Vancouver’s all-female* hackathon</p>
@@ -133,7 +132,7 @@ export default {
 }
 .mobile-h1 {
   font-size: 36px;
-  font-weight: 800;
+  font-weight: bold;
   line-height: 40px;
 }
 .subheader-content {
@@ -262,7 +261,8 @@ export default {
 //Mobile CSS:
 @include until($tablet) {
   .mobile-h1 {
-    display: inline
+    display: block;
+    width: 25vw;
   }
   .intro-section {
     font-size: 16px;
@@ -275,11 +275,17 @@ export default {
   .header {
     background-image: url("~@/assets/mobile-header.svg");
     min-height: 170vw; // the bg image is height compared to width
+    background-size: 100vw;
   }
   .header-content {
     text-align: left;
-    padding: 33vw 0 0 4vw;
-    width: 40vw;
+    padding: 30vw 0 0 4vw;
+    width: 50vw;
+  }
+  .header-content img {
+    width: 20vw;
+    margin-bottom: 40px;
+    display: block;
   }
   .subheader {
     background: url("~@/assets/graphics/clouds-mobile.svg") left top no-repeat,linear-gradient(#2F4246, #E9E8E0 160%);
