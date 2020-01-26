@@ -54,16 +54,28 @@
               </p>
             </kinesis-element>
           </div>
-          <img
-            id="about-bottom-graphic"
-            alt="graphic under about section"
-            src="../assets/graphics/mountain-and-person.svg"
+          <kinesis-element
+            :strength="backgroundParallaxStrength"
+            type="translate"
+            axis="y"
           >
-          <img
-            id="foreground-graphic"
-            alt="foreground graphic under about section"
-            src="../assets/graphics/foreground.svg"
+            <img
+              id="background-graphic"
+              alt="background graphic under about section"
+              src="../assets/graphics/mountain-and-person.svg"
+            >
+          </kinesis-element>
+          <kinesis-element
+            :strength="foregroundParallaxStrength"
+            type="translate"
+            axis="y"
           >
+            <img
+              id="foreground-graphic"
+              alt="foreground graphic under about section"
+              src="../assets/graphics/foreground.svg"
+            >
+          </kinesis-element>
         </div>
       </kinesis-element>
     </kinesis-container>
@@ -89,8 +101,10 @@ export default {
   data: function () {
     return {
       parallaxDelay: '10ms',
-      textParallaxStrength: '-100',
-      cloudsParallaxStrength: '-50'
+      textParallaxStrength: '-150',
+      cloudsParallaxStrength: '-100',
+      foregroundParallaxStrength: '-100',
+      backgroundParallaxStrength: '-50'
     }
   },
 
@@ -126,15 +140,15 @@ export default {
   margin-bottom: 20px;
   max-height: 77px;
 }
-#about-bottom-graphic {
+#background-graphic {
   position: absolute;
-  transform: translateY(-50%);
-  bottom: -45vh;
+  transform: translateY(-45%);
+  top: 25vh;
 }
 #foreground-graphic {
   position: absolute;
-  transform: translateY(5%);
-  bottom: -45vh;
+  transform: translateY(-35%);
+  top: 25vh;
 }
 .subheader-content-body {
   font-family: 'Arapey';
@@ -199,7 +213,7 @@ export default {
 .subheader {
   min-height: 100vh;
   color: white;
-  padding-bottom: 25%;
+  padding-bottom: 15%;
 }
 .subheader-content {
   max-width: 900px;
@@ -239,7 +253,7 @@ export default {
     padding: 90vw 0 0 59vw;
   }
   .subheader {
-    background: url("~@/assets/graphics/clouds-mobile.svg") left top no-repeat, #2F4246;
+    background: url("~@/assets/graphics/clouds-mobile.svg") left top no-repeat,linear-gradient(#2F4246, #E9E8E0 160%);
     background-size: 100vw;
   }
   .subheader-content p {
@@ -249,7 +263,12 @@ export default {
   font-size: 18px;
   margin: 20px auto;
   }
-
+#background-graphic {
+  top: 10vh;
+}
+#foreground-graphic {
+  top: 10vh;
+}
   .subheader-content-body {
     min-width: 325px;
     width: 80%;
