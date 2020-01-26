@@ -1,6 +1,6 @@
 <template>
   <div class="intro-section">
-    <kinesis-container event="scroll" duration="100" easing="cubic-bezier(0.250, 0.250, 0.750, 0.750)">
+    <kinesis-container :duration="parallaxDelay" event="scroll" easing="cubic-bezier(0.250, 0.250, 0.750, 0.750)">
       <div :class="{visible: isTimeout}" class="header">
         <div class="header-content">
           <div>
@@ -14,47 +14,58 @@
           </div>
         </div>
       </div>
-      <div class="subheader">
-        <div class="subheader-content">
-          <kinesis-element
-            :strength="-100"
-            type="translate"
-            axis="y"
-          >
-            <img
-              id="white-logo"
-              alt="cmd-f logo in white"
-              src="../assets/nwlogos/cmdf-white.svg"
+      <kinesis-element
+        :strength="cloudsParallaxStrength"
+        type="translate"
+        axis="y"
+      >
+        <div class="subheader">
+          <div class="subheader-content">
+            <kinesis-element
+              :strength="textParallaxStrength"
+              type="translate"
+              axis="y"
             >
-            <p>Join us on International Women*'s Day at British Columbia's first and largest all-female* hackathon to explore new technologies and celebrate women* in tech.</p>
-          </kinesis-element>
-        </div>
-        <div class="subheader-content-body">
-          <kinesis-element
-            :strength="-100"
-            type="translate"
-            axis="y"
+              <img
+                id="white-logo"
+                alt="cmd-f logo in white"
+                src="../assets/nwlogos/cmdf-white.svg"
+              >
+              <p>Join us on International Women*'s Day at British Columbia's first and largest all-female* hackathon to explore new technologies and celebrate women* in tech.</p>
+            </kinesis-element>
+          </div>
+          <div class="subheader-content-body">
+            <kinesis-element
+              :strength="textParallaxStrength"
+              type="translate"
+              axis="y"
+            >
+              <p id="subheader-body-main">
+                We're here to break stereotypes and create a safe space for women* where they can learn new skills, build confidence, and discover a supportive community. Whether you're a first time hacker or a veteran, we want to help you take your next steps in tech. Come join us for a fun weekend of hacking with amazing workshops, social events, and food!
+              </p>
+            </kinesis-element>
+            <kinesis-element
+              :strength="textParallaxStrength"
+              type="translate"
+              axis="y"
+            >
+              <p id="acknowledgement">
+                * The cmd-f team would like to acknowledge that "female" or "women" is not an accurate description for many people and may make some feel unwelcome. We use * to include cis and trans women, as well as non-binary, agender and intersex people.
+              </p>
+            </kinesis-element>
+          </div>
+          <img
+            id="about-bottom-graphic"
+            alt="graphic under about section"
+            src="../assets/graphics/mountain-and-person.svg"
           >
-            <p id="subheader-body-main">
-              We're here to break stereotypes and create a safe space for women* where they can learn new skills, build confidence, and discover a supportive community. Whether you're a first time hacker or a veteran, we want to help you take your next steps in tech. Come join us for a fun weekend of hacking with amazing workshops, social events, and food!
-            </p>
-          </kinesis-element>
-          <kinesis-element
-            :strength="-100"
-            type="translate"
-            axis="y"
+          <img
+            id="foreground-graphic"
+            alt="foreground graphic under about section"
+            src="../assets/graphics/foreground.svg"
           >
-            <p id="acknowledgement">
-              * The cmd-f team would like to acknowledge that "female" or "women" is not an accurate description for many people and may make some feel unwelcome. We use * to include cis and trans women, as well as non-binary, agender and intersex people.
-            </p>
-          </kinesis-element>
         </div>
-        <img
-          id="about-bottom-graphic"
-          alt="graphic under about section"
-          src="../assets/graphics/about-bottom.svg"
-        >
-      </div>
+      </kinesis-element>
     </kinesis-container>
   </div>
 </template>
@@ -72,6 +83,14 @@ export default {
       default: () => {
         return false
       }
+    }
+  },
+
+  data: function () {
+    return {
+      parallaxDelay: '10ms',
+      textParallaxStrength: '-100',
+      cloudsParallaxStrength: '-50'
     }
   },
 
@@ -109,6 +128,13 @@ export default {
 }
 #about-bottom-graphic {
   position: absolute;
+  transform: translateY(-50%);
+  bottom: -45vh;
+}
+#foreground-graphic {
+  position: absolute;
+  transform: translateY(5%);
+  bottom: -45vh;
 }
 .subheader-content-body {
   font-family: 'Arapey';
@@ -173,7 +199,7 @@ export default {
 .subheader {
   min-height: 100vh;
   color: white;
-  padding-bottom: 30%;
+  padding-bottom: 25%;
 }
 .subheader-content {
   max-width: 900px;

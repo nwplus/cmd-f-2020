@@ -43,7 +43,7 @@ export default {
 @import "bulma/bulma.sass";
 .mainContainer {
   margin: 0% auto 50px auto;
-  padding-top: 30%;
+  padding-top: 17%;
 }
 
 .events {
