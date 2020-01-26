@@ -16,6 +16,8 @@
             <p><strong>March 07-08, 2020</strong></p>
             <p>Vancouver’s all-female* hackathon</p>
             <a><button>Apply Now</button></a>
+            <a href="#">Interested in Mentoring?</a>
+            <a href="#">I want to volunteer!</a>
           </div>
         </div>
       </div>
@@ -168,7 +170,6 @@ export default {
   font-weight: normal;
   line-height: 25px;
 }
-
 .subheader-content-body p#subheader-body-main:first-letter {
   font-size: 2.9em;
   display: block;
@@ -195,6 +196,15 @@ export default {
 .header-content {
   text-align: right;
 }
+.header-content a {
+  display: block;
+  text-decoration: underline;
+  color: #2F4246;
+  transition-duration: 0.3s;
+}
+.header-content a:hover {
+  color: #969D8D;
+}
 .visible {
   opacity: 1;
 }
@@ -205,10 +215,10 @@ export default {
   background: #2F4246;
   border-radius: 120px;
   border: none;
-  color: white;
-  margin-top: 10px;
+  margin: 14px 0;
   width: 311px;
   height: 48px;
+  cursor: pointer;
   font-family: Zilla Slab;
   font-weight: bold;
   font-style: normal;
@@ -231,7 +241,7 @@ export default {
 //Desktop CSS:
 @include from($tablet) {
   .mobile-h1 {
-    display: block
+    display: none
   }
   .header {
     background-image: url("~@/assets/header.svg");
@@ -271,6 +281,7 @@ export default {
     font-size: 16px;
     width: 40vw;
     height: 36px;
+    margin: 7px 0;
   }
   .header {
     background-image: url("~@/assets/mobile-header.svg");
@@ -279,12 +290,13 @@ export default {
   }
   .header-content {
     text-align: left;
-    padding: 30vw 0 0 4vw;
-    width: 50vw;
+    padding: 25vw 0 0 4vw;
+    width: 56vw;
   }
   .header-content img {
-    width: 20vw;
-    margin-bottom: 40px;
+    width: 15vw;
+    margin-top: 8px;
+    margin-bottom: 30px;
     display: block;
   }
   .subheader {
