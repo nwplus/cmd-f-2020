@@ -123,6 +123,7 @@ export default {
   color: #2F4246;
   font-size: 23px;
   font-weight: normal;
+  background-color: #2F4246;
 }
 .subheader-content {
   position: relative;
@@ -176,7 +177,7 @@ export default {
 .header {
   opacity: 0;
   transition: opacity 400ms linear 0ms;
-  min-height: 74vw; // this is svg dimensions
+  min-height: 77vw; // this is svg dimensions
   background-position: left top;
   background-repeat: no-repeat;
   background-size: 100vw;
