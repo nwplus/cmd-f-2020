@@ -41,9 +41,9 @@ export default {
 
 <style lang="scss" scoped>
 @import "bulma/bulma.sass";
-@import url('https://fonts.googleapis.com/css?family=Arapey|Zilla+Slab:400,700&display=swap');
 .mainContainer {
   margin: 0% auto 50px auto;
+  padding-top: 17%;
 }
 
 .events {
