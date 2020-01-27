@@ -21,70 +21,64 @@
           </div>
         </div>
       </div>
-      <kinesis-element
-        :strength="cloudsParallaxStrength"
-        type="translate"
-        axis="y"
-      >
-        <div class="subheader">
-          <div class="subheader-content">
-            <kinesis-element
-              :strength="textParallaxStrength"
-              type="translate"
-              axis="y"
-            >
-              <img
-                id="white-logo"
-                alt="cmd-f logo in white"
-                src="../assets/nwlogos/cmdf-white.svg"
-              >
-              <p>Join us on International Women*'s Day at British Columbia's first and largest all-female* hackathon to explore new technologies and celebrate women* in tech.</p>
-            </kinesis-element>
-          </div>
-          <div class="subheader-content-body">
-            <kinesis-element
-              :strength="textParallaxStrength"
-              type="translate"
-              axis="y"
-            >
-              <p id="subheader-body-main">
-                We're here to break stereotypes and create a safe space for women* where they can learn new skills, build confidence, and discover a supportive community. Whether you're a first time hacker or a veteran, we want to help you take your next steps in tech. Come join us for a fun weekend of hacking with amazing workshops, social events, and food!
-              </p>
-            </kinesis-element>
-            <kinesis-element
-              :strength="textParallaxStrength"
-              type="translate"
-              axis="y"
-            >
-              <p id="acknowledgement">
-                * The cmd-f team would like to acknowledge that "female" or "women" is not an accurate description for many people and may make some feel unwelcome. We use * to include cis and trans women, as well as non-binary, agender and intersex people.
-              </p>
-            </kinesis-element>
-          </div>
+      <div class="subheader">
+        <div class="subheader-content">
           <kinesis-element
-            :strength="backgroundParallaxStrength"
+            :strength="textParallaxStrength"
             type="translate"
             axis="y"
           >
             <img
-              id="background-graphic"
-              alt="background graphic under about section"
-              src="../assets/graphics/mountain-and-person.svg"
+              id="white-logo"
+              alt="cmd-f logo in white"
+              src="../assets/nwlogos/cmdf-white.svg"
             >
-          </kinesis-element>
-          <kinesis-element
-            :strength="foregroundParallaxStrength"
-            type="translate"
-            axis="y"
-          >
-            <img
-              id="foreground-graphic"
-              alt="foreground graphic under about section"
-              src="../assets/graphics/foreground.svg"
-            >
+            <p>Join us on International Women*'s Day at British Columbia's first and largest all-female* hackathon to explore new technologies and celebrate women* in tech.</p>
           </kinesis-element>
         </div>
-      </kinesis-element>
+        <div class="subheader-content-body">
+          <kinesis-element
+            :strength="textParallaxStrength"
+            type="translate"
+            axis="y"
+          >
+            <p id="subheader-body-main">
+              We're here to break stereotypes and create a safe space for women* where they can learn new skills, build confidence, and discover a supportive community. Whether you're a first time hacker or a veteran, we want to help you take your next steps in tech. Come join us for a fun weekend of hacking with amazing workshops, social events, and food!
+            </p>
+          </kinesis-element>
+          <kinesis-element
+            :strength="textParallaxStrength"
+            type="translate"
+            axis="y"
+          >
+            <p id="acknowledgement">
+              * The cmd-f team would like to acknowledge that "female" or "women" is not an accurate description for many people and may make some feel unwelcome. We use * to include cis and trans women, as well as non-binary, agender and intersex people.
+            </p>
+          </kinesis-element>
+        </div>
+        <kinesis-element
+          :strength="backgroundParallaxStrength"
+          type="translate"
+          axis="y"
+        >
+          <img
+            id="background-graphic"
+            alt="background graphic under about section"
+            src="../assets/graphics/mountain-and-person.svg"
+          >
+        </kinesis-element>
+        <kinesis-element
+          :strength="foregroundParallaxStrength"
+          type="translate"
+          axis="y"
+        >
+          <img
+            id="foreground-graphic"
+            alt="foreground graphic under about section"
+            src="../assets/graphics/foreground.svg"
+          >
+        </kinesis-element>
+      </div>
     </kinesis-container>
   </div>
 </template>
@@ -107,11 +101,11 @@ export default {
 
   data: function () {
     return {
-      parallaxDelay: '10ms',
-      textParallaxStrength: '-150',
-      cloudsParallaxStrength: '-100',
-      foregroundParallaxStrength: '-100',
-      backgroundParallaxStrength: '-50'
+      parallaxDelay: 10,
+      textParallaxStrength: -200,
+      cloudsParallaxStrength: -100,
+      foregroundParallaxStrength: -200,
+      backgroundParallaxStrength: -100
     }
   },
 
@@ -131,6 +125,7 @@ export default {
   font-size: 23px;
   font-weight: normal;
   background-color: #2F4246;
+  height: auto;
 }
 .mobile-h1 {
   font-size: 36px;
