@@ -3,22 +3,20 @@
     <kinesis-container :duration="parallaxDelay" event="scroll" easing="cubic-bezier(0.250, 0.250, 0.750, 0.750)">
       <div :class="{visible: isTimeout}" class="header">
         <div class="header-content">
-          <div>
-            <div class="mobile-h1-wrapper">
-              <h1 class="mobile-h1">
-                change the norm
-              </h1>
-            </div>
-            <img
-              alt="cmd-f logo"
-              src="../assets/nwlogos/cmdf.svg"
-            >
-            <p><strong>March 07-08, 2020</strong></p>
-            <p>Vancouver’s all-female* hackathon</p>
-            <a><button>Apply Now</button></a>
-            <a href="#">Interested in Mentoring?</a>
-            <a href="#">I want to volunteer!</a>
+          <div class="mobile-h1-wrapper">
+            <h1 class="mobile-h1">
+              change the norm
+            </h1>
           </div>
+          <img
+            alt="cmd-f logo"
+            src="../assets/nwlogos/cmdf.svg"
+          >
+          <p><strong>March 07-08, 2020</strong></p>
+          <p>Vancouver’s all-female* hackathon</p>
+          <a><button>Apply Now</button></a>
+          <a href="#">Interested in Mentoring?</a>
+          <a href="#">I want to volunteer!</a>
         </div>
       </div>
       <div class="subheader">
@@ -210,7 +208,7 @@ export default {
   border-radius: 120px;
   border: none;
   margin: 14px 0;
-  width: 311px;
+  width: 20vw;
   height: 48px;
   cursor: pointer;
   font-family: Zilla Slab;
@@ -242,6 +240,8 @@ export default {
   }
   .header-content {
     padding: 31vw 14vw 0 0;
+    width: 40vw;
+    float: right;
   }
   .subheader {
     background: url("~@/assets/graphics/clouds.svg") left top no-repeat, linear-gradient(#2F4246, #E9E8E0 130%);
