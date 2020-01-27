@@ -98,7 +98,6 @@ export default {
 
 <style scoped lang="scss">
 @import "bulma/bulma.sass";
-@import url('https://fonts.googleapis.com/css?family=Arapey|Zilla+Slab:400,700&display=swap');
 .container {
   width: 90%;
   margin: 0 auto;

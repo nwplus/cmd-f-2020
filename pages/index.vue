@@ -81,15 +81,18 @@ export default {
 @import "bulma/bulma.sass";
 //Desktop CSS:
 @font-face {
-  font-family: "Apercu Pro";
-  src: url("../assets/fonts/apercu_regular_pro.otf") format("opentype");
+  font-family: 'Zilla Slab';
+  src: url(https://fonts.gstatic.com/s/zillaslab/v5/dFa6ZfeM_74wlPZtksIFajo6_Q.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Arapey';
+  src: url(https://fonts.gstatic.com/s/arapey/v8/-W__XJn-UDDA2RCKYNod.woff2) format('woff2');
 }
 #main-page {
   background-color: #e9e8e0;
 }
 @include from($tablet) {
-    #mainSection {
-    transform: scale(0.85);
+  #mainSection {
     margin: auto;
   }
 }
