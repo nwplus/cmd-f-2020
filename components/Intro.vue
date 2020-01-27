@@ -101,11 +101,10 @@ export default {
 
   data: function () {
     return {
-      parallaxDelay: 10,
+      parallaxDelay: 0,
       textParallaxStrength: -200,
-      cloudsParallaxStrength: -100,
-      foregroundParallaxStrength: -200,
-      backgroundParallaxStrength: -100
+      foregroundParallaxStrength: -160,
+      backgroundParallaxStrength: -75
     }
   },
 
@@ -297,6 +296,7 @@ export default {
   .subheader {
     background: url("~@/assets/graphics/clouds-mobile.svg") left top no-repeat,linear-gradient(#2F4246, #E9E8E0 160%);
     background-size: 100vw;
+    padding-bottom: 0;
   }
   .subheader-content p {
   line-height: 22px;
@@ -306,10 +306,10 @@ export default {
   margin: 20px auto;
   }
 #background-graphic {
-  top: 10vh;
+  top: 0vh;
 }
 #foreground-graphic {
-  top: 10vh;
+  top: 7vh;
 }
   .subheader-content-body {
     min-width: 325px;
