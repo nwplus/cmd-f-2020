@@ -194,7 +194,7 @@ export default {
 
 .copyright-text {
   color: #2f4246;
-  width: 400px;
+  width: 350px;
   margin: 0 auto;
   font-size: 20px;
   font-family: Arapey;
@@ -266,7 +266,6 @@ svg:hover path {
   }
   .copyright-text {
     color: #eeeddb;
-    width: 100%;
   }
   .moon-stars {
     display: block;
