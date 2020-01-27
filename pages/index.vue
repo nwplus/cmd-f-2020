@@ -4,11 +4,13 @@
     <section id="mainSection">
       <div class="mainContent">
         <Intro id="intro" :intro="intro" />
-        <Events id="events" :items="events" />
-        <img src="~@/assets/branch.png" class="branch">
-        <FAQ id="faq" v-if="faqFlag" :items="FAQs" />
-        <img src="~@/assets/birdAndBranch.png" class="bird-branch">
-        <Sponza id="sponza" v-if="sponsorFlag" :items="sponsors" />
+        <div id="scaledSection">
+          <Events id="events" :items="events" />
+          <img src="~@/assets/branch.png" class="branch">
+          <FAQ id="faq" v-if="faqFlag" :items="FAQs" />
+          <img src="~@/assets/birdAndBranch.png" class="bird-branch">
+          <Sponza id="sponza" v-if="sponsorFlag" :items="sponsors" />
+        </div>
       </div>
     </section>
     <Footer :text="footer" />
@@ -81,12 +83,19 @@ export default {
 @import "bulma/bulma.sass";
 //Desktop CSS:
 @font-face {
-  font-family: 'Zilla Slab';
-  src: url(https://fonts.gstatic.com/s/zillaslab/v5/dFa6ZfeM_74wlPZtksIFajo6_Q.woff2) format('woff2');
+  font-family: "Zilla Slab";
+  src: url(https://fonts.gstatic.com/s/zillaslab/v5/dFa6ZfeM_74wlPZtksIFajo6_Q.woff2)
+    format("woff2");
 }
 @font-face {
-  font-family: 'Arapey';
-  src: url(https://fonts.gstatic.com/s/arapey/v8/-W__XJn-UDDA2RCKYNod.woff2) format('woff2');
+  font-family: "Arapey";
+  src: url(https://fonts.gstatic.com/s/arapey/v8/-W__XJn-UDDA2RCKYNod.woff2)
+    format("woff2");
+}
+#scaledSection {
+  @include from($tablet) {
+    transform: scale(0.9);
+  }
 }
 #main-page {
   background-color: #e9e8e0;
@@ -117,7 +126,7 @@ export default {
     width: 60%;
   }
   .bird-branch {
-    margin-left: 45%;
+    margin-left: 40%;
     width: 60%;
     margin-top: 0px;
     margin-bottom: 0;
