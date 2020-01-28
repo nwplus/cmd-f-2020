@@ -6,7 +6,13 @@ os:
 notifications:
   email: false
   slack:
-    secure: CcTUqFnp4f7ks1npvzDfODDuJ4xnTvTYSAzIXrKBo11zB4qhPwnQmoXsmas18jQoGMg/L4yyWnIpQykXolMfs1NeGJsqfERQz+Z7sAi/GAHU9licI5kK7AWpFeV56kKzQHNEes2GgSdLsLmIxHsd+WoCSC0OuJoYiEhw36GdhJ1hS7O4viy3QBcSIAVQB9Qxx45M8WpuAdtOj3sR4ceRHk0XRu2oeIlO8398eTuloYODTdZy3wKhmHSB34ur9OAdEg734Qsl6ws2lB1qUuqDpCtIsf4Bgo8QfGBgc/EVsh52HhwKJm87eDDIxDO5zS/HFs3tXpID8Jgc9jWZCUJkj7cO0gg04lXlLeQcUXYIwa1EkiSUg+wpgrAphWpvYHAQ9pZ26ugrP3G7IzWFm5tVKOZKLNDmQ8ivgVojYmK3aS6gOnHrhyq5HN6n4VEZqNAPy1AfObPCkqMSNIgPI0lGKPJMiJUzkHwLRbCinCiETnSvwQjLiEKPouE90EFzsw451hiKI9R40QXj2ig6PVkvglOVcNLq4J9Vt+P5c4dNSN6JOZS4IJv/loYZrqaxzaRvkG+8iizH00QHSizMbp71xYHp2IQHdXzZmf4tvHaaHWW0nxxHbd6XdYsPAQoVDCVk+MFTMBiTPnN4NG6uxXllqxhJrK21DesbsvzIhtS0GZs=
+    rooms:
+      - secure: CcTUqFnp4f7ks1npvzDfODDuJ4xnTvTYSAzIXrKBo11zB4qhPwnQmoXsmas18jQoGMg/L4yyWnIpQykXolMfs1NeGJsqfERQz+Z7sAi/GAHU9licI5kK7AWpFeV56kKzQHNEes2GgSdLsLmIxHsd+WoCSC0OuJoYiEhw36GdhJ1hS7O4viy3QBcSIAVQB9Qxx45M8WpuAdtOj3sR4ceRHk0XRu2oeIlO8398eTuloYODTdZy3wKhmHSB34ur9OAdEg734Qsl6ws2lB1qUuqDpCtIsf4Bgo8QfGBgc/EVsh52HhwKJm87eDDIxDO5zS/HFs3tXpID8Jgc9jWZCUJkj7cO0gg04lXlLeQcUXYIwa1EkiSUg+wpgrAphWpvYHAQ9pZ26ugrP3G7IzWFm5tVKOZKLNDmQ8ivgVojYmK3aS6gOnHrhyq5HN6n4VEZqNAPy1AfObPCkqMSNIgPI0lGKPJMiJUzkHwLRbCinCiETnSvwQjLiEKPouE90EFzsw451hiKI9R40QXj2ig6PVkvglOVcNLq4J9Vt+P5c4dNSN6JOZS4IJv/loYZrqaxzaRvkG+8iizH00QHSizMbp71xYHp2IQHdXzZmf4tvHaaHWW0nxxHbd6XdYsPAQoVDCVk+MFTMBiTPnN4NG6uxXllqxhJrK21DesbsvzIhtS0GZs=
+    on_success: always
+    template:
+      - "Repo %{repository_slug} %{result} build (<%{build_url}|#%{build_number}>) for commit (<%{compare_url}|%{commit}>) on branch %{branch}."
+      - "Execution time: %{duration}"
+      - "Message: %{message}"
 install:
 - yarn install
 jobs:
