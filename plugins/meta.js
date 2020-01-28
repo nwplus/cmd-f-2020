@@ -20,7 +20,7 @@ function meta({ route, html }) {
     name: 'cmd-f 2020',
     description:
       'British Columbia’s all-female* hackathon. Held March 7-8th, 2020 at UBC',
-    image: 'http://staging.nwplus.io/thumbnail.png',
+    image: 'http://cmd-f.nwplus.io/thumbnail.png',
     url: 'http://cmd-f.nwplus.io'
   }
 
