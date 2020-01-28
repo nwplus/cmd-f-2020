@@ -42,34 +42,29 @@ img:hover {
 }
 
 .tera {
-  min-height: 210px;
-  min-width: 350px;
-  max-width: 400px;
+  min-width: 480px;
+  max-width: 500px;
   max-height: 260px;
 }
 .giga {
-  min-height: 190px;
-  min-width: 310px;
-  max-width: 360px;
+  min-width: 330px;
+  max-width: 350px;
   max-height: 240px;
 }
 .mega {
-  min-height: 170px;
-  min-width: 270px;
-  max-width: 320px;
+  min-width: 280px;
+  max-width: 300px;
   max-height: 220px;
 }
 .kilo {
-  min-height: 150px;
   min-width: 230px;
-  max-width: 280px;
+  max-width: 250px;
   max-height: 200px;
 }
 .in-kind {
-  min-height: 130px;
-  min-width: 190px;
-  max-width: 240px;
-  max-height: 180px;
+  min-width: 150px;
+  max-width: 150px;
+  max-height: 150px;
 }
 //Mobile CSS:
 @include until($tablet) {
