@@ -99,7 +99,7 @@ export default {
 
   data: function () {
     return {
-      parallaxDelay: 0,
+      parallaxDelay: 300,
       textParallaxStrength: -200,
       foregroundParallaxStrength: -160,
       backgroundParallaxStrength: -75
