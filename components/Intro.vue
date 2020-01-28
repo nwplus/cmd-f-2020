@@ -300,7 +300,7 @@ export default {
   }
   .subheader-content p {
   line-height: 22px;
-  min-width: 350px;
+  min-width: 300px;
   width: 80%;
   font-size: 18px;
   margin: 20px auto;
@@ -312,7 +312,7 @@ export default {
   top: 7vh;
 }
   .subheader-content-body {
-    min-width: 325px;
+    min-width: 275px;
     width: 80%;
     margin: 10px auto;
   }
