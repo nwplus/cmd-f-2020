@@ -96,13 +96,14 @@ export default {
       }
     }
   },
-
   data: function () {
     return {
-      parallaxDelay: 300,
-      textParallaxStrength: -200,
-      foregroundParallaxStrength: -160,
-      backgroundParallaxStrength: -75
+      parallaxDelay: 150
+    }
+  },
+  computed: {
+    textParallaxStrength() {
+      return screen.width > 768 ? -350 : -150
     }
   },
 
@@ -148,12 +149,12 @@ export default {
 #background-graphic {
   position: absolute;
   transform: translateY(-45%);
-  top: 25vh;
+  top: 5vh;
 }
 #foreground-graphic {
   position: absolute;
   transform: translateY(-35%);
-  top: 25vh;
+  top: 5vh;
 }
 .subheader-content-body {
   font-family: 'Arapey';
@@ -223,7 +224,7 @@ export default {
 .subheader {
   min-height: 100vh;
   color: white;
-  padding-bottom: 15%;
+  padding-bottom: 10%;
 }
 .subheader-content {
   max-width: 900px;
@@ -296,7 +297,7 @@ export default {
   .subheader {
     background: url("~@/assets/graphics/clouds-mobile.svg") left top no-repeat,linear-gradient(#2F4246, #E9E8E0 160%);
     background-size: 100vw;
-    padding-bottom: 0;
+    padding-bottom: 15%;
   }
   .subheader-content p {
   line-height: 22px;
@@ -309,7 +310,7 @@ export default {
   top: 0vh;
 }
 #foreground-graphic {
-  top: 7vh;
+  top: 0vh;
 }
   .subheader-content-body {
     min-width: 275px;
