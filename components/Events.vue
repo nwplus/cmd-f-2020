@@ -6,12 +6,12 @@
     <div class="subText">
       cmd-f was established according to our 3 main values:
     </div>
-    <div class="columns is-3-tablet">
+    <div class="no-overflow columns is-3-tablet">
       <div v-for="item in sortedEvents" :key="item.order">
         <div
           class="events column"
         >
-          <img class="images" :src="item.imageLink">
+          <img :src="item.imageLink" class="images">
           <div class="title">
             {{ item.title }}
           </div>
@@ -41,13 +41,14 @@ export default {
 
 <style lang="scss" scoped>
 @import "bulma/bulma.sass";
-@import url('https://fonts.googleapis.com/css?family=Arapey|Zilla+Slab:400,700&display=swap');
 .mainContainer {
-  margin: 0% 15% 50px 15%;
+  margin: 0% auto 50px auto;
+  padding-top: 17%;
 }
 
 .events {
   text-align: center;
+  padding: 0;
 }
 
 .images {
@@ -78,17 +79,12 @@ export default {
   text-align: center;
   margin-bottom: 30px;
 }
-
-@include until($desktop) {
-  .mainContainer {
-    margin: 0% 2% 50px 2%;
+@include until($tablet){
+  .no-overflow {
+    max-width: 100vw;
   }
-}
-
-@include until($tablet) {
   .mainContainer {
-    margin: 0% 9% 50px 9%;
+    margin: 0% 10% 50px 10%;
   }
-
 }
 </style>

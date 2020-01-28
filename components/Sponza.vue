@@ -4,7 +4,6 @@
       Sponsors
     </p>
     <br>
-
     <div id="sponsors-list" class="sponsorCategory">
       <div v-for="item in listOfTera" :key="item.name" class="sponsorWrapper">
         <SponsorImage :item="item" />
@@ -31,21 +30,15 @@
       </div>
     </div>
     <!--  -->
-    <a href="mailto:sponsorship@nwplus.io">
-      <img
-        class="becomeSponsor"
-        src=""
-        style="margin-top: 15px;"
-        title="Become a Sponsor"
-      >
-    </a>
+    <BecomeSponsorButton />
   </div>
 </template>
 
 <script>
 import SponsorImage from '~/components/SponsorImage'
+import BecomeSponsorButton from '~/components/becomeSponsorButton'
 export default {
-  components: { SponsorImage },
+  components: { SponsorImage, BecomeSponsorButton },
   props: {
     items: {
       type: Array,
@@ -73,32 +66,23 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import url('https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap');
 @import "bulma/bulma.sass";
 $heading-font: "Caveat Brush";
 //Desktop CSS:
-.becomeSponsor {
-  transition-duration: 0.3s;
-  width: auto;
-}
-.becomeSponsor:hover {
-  transform: scale(1.1);
-}
+
 h2 {
   font-family: $heading-font;
   font-size: 48px;
   line-height: 60px;
 }
 .sponsor-title {
-  font-family: Apercu Pro;
-  font-size: 36px;
+  font-family: Zilla Slab;
+  font-style: normal;
+  font-size: 48px;
   line-height: 37px;
-  letter-spacing: 0.05em;
   font-weight: bold;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  background: -webkit-linear-gradient(180deg, #91e9ee 0%, #06c1c0 100%);
+  color: #2F4246;
   margin-bottom: 20px;
 }
 .sponsorCategory {

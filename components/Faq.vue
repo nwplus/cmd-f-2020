@@ -12,7 +12,7 @@
         </p>
         <div v-for="item in sortedItems" :key="`General-${item.question}`">
           <div v-if="item.selected && item.category == 'General'">
-            <button class="accordion" @click="openSesame">
+            <button @click="openSesame" class="accordion">
               {{ item.question }}
             </button>
             <div class="panel">
@@ -31,7 +31,7 @@
         </p>
         <div v-for="item in items" :key="`Teams-${item.question}`">
           <div v-if="item.selected && item.category == 'Teams'">
-            <button class="accordion" @click="openSesame">
+            <button @click="openSesame" class="accordion">
               {{ item.question }}
             </button>
             <div class="panel">
@@ -46,7 +46,7 @@
         </p>
         <div v-for="item in items" :key="`Logistics-${item.question}`">
           <div v-if="item.selected && item.category == 'Logistics'">
-            <button class="accordion" @click="openSesame">
+            <button @click="openSesame" class="accordion">
               {{ item.question }}
             </button>
             <div class="panel">
@@ -98,7 +98,6 @@ export default {
 
 <style scoped lang="scss">
 @import "bulma/bulma.sass";
-@import url('https://fonts.googleapis.com/css?family=Arapey|Zilla+Slab:400,700&display=swap');
 .container {
   width: 90%;
   margin: 0 auto;
