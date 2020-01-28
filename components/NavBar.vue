@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <nav :class="{navbar: true, visible: visible}" role="navigation" aria-label="main navigation">
+    <nav :class="{navbar: true}" :style="{visibility: visible, opacity: opacity}" role="navigation" aria-label="main navigation">
       <a
         href="https://mlh.io/seasons/na-2020/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2020-season&utm_content=black"
         target="_blank"
@@ -45,7 +45,8 @@ export default {
   },
   data() {
     return {
-      visible: true,
+      visible: 'visible',
+      opacity: '1',
       scrollFunc: () => {}
     }
   },
@@ -62,11 +63,14 @@ export default {
       return (event) => {
         const scroll = window.pageYOffset || document.documentElement.scrollTop
         if (scroll <= 0) {
-          this.visible = true
+          this.visible = 'visible'
+          this.opacity = '1'
         } else if (scroll > lastScroll) {
-          this.visible = false
+          this.visible = 'hidden'
+          this.opacity = '0'
         } else {
-          this.visible = true
+          this.visible = 'visible'
+          this.opacity = '1'
         }
         lastScroll = scroll
       }
@@ -87,11 +91,8 @@ export default {
   top: 0%;
   width: 100%;
   padding: 0;
-  opacity: 0;
-  transition: 0.5s;
-}
-.visible {
-  opacity: 1;
+  visibility: hidden;
+  transition: 0.5s ease-in-out;
 }
 .navbar-item {
     display: inline-block;
