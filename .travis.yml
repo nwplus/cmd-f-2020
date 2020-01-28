@@ -1,39 +1,41 @@
 language: node_js
 node_js:
-  - 10.15.3
+- 10.15.3
 os:
-  - osx
+- osx
 notifications:
   email: false
+  slack:
+    secure: CcTUqFnp4f7ks1npvzDfODDuJ4xnTvTYSAzIXrKBo11zB4qhPwnQmoXsmas18jQoGMg/L4yyWnIpQykXolMfs1NeGJsqfERQz+Z7sAi/GAHU9licI5kK7AWpFeV56kKzQHNEes2GgSdLsLmIxHsd+WoCSC0OuJoYiEhw36GdhJ1hS7O4viy3QBcSIAVQB9Qxx45M8WpuAdtOj3sR4ceRHk0XRu2oeIlO8398eTuloYODTdZy3wKhmHSB34ur9OAdEg734Qsl6ws2lB1qUuqDpCtIsf4Bgo8QfGBgc/EVsh52HhwKJm87eDDIxDO5zS/HFs3tXpID8Jgc9jWZCUJkj7cO0gg04lXlLeQcUXYIwa1EkiSUg+wpgrAphWpvYHAQ9pZ26ugrP3G7IzWFm5tVKOZKLNDmQ8ivgVojYmK3aS6gOnHrhyq5HN6n4VEZqNAPy1AfObPCkqMSNIgPI0lGKPJMiJUzkHwLRbCinCiETnSvwQjLiEKPouE90EFzsw451hiKI9R40QXj2ig6PVkvglOVcNLq4J9Vt+P5c4dNSN6JOZS4IJv/loYZrqaxzaRvkG+8iizH00QHSizMbp71xYHp2IQHdXzZmf4tvHaaHWW0nxxHbd6XdYsPAQoVDCVk+MFTMBiTPnN4NG6uxXllqxhJrK21DesbsvzIhtS0GZs=
 install:
-  - yarn install
+- yarn install
 jobs:
   include:
-    - stage: "Lint, Test and Build"
-    - script: yarn lint && yarn test && yarn generate
-    - stage: "Staging"
-    - script: yarn generate:prod
-      deploy:
-        provider: firebase
-        skip_cleanup: true
-        token:
-          secure: $FIREBASE_TOKEN
-        project: "nwhacks-2019"
-        on:
-          branch: dev
-    - stage: Deploy
-      script: yarn generate:prod && echo "cmdf.nwhacks.io" >> dist/CNAME
-      deploy:
-        provider: pages
-        skip_cleanup: true
-        github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-        keep_history: true
-        local_dir: dist
-        on:
-          branch: master
+  - stage: Lint, Test and Build
+  - script: yarn lint && yarn test && yarn generate
+  - stage: Staging
+  - script: yarn generate:prod
+    deploy:
+      provider: firebase
+      skip_cleanup: true
+      token:
+        secure: "$FIREBASE_TOKEN"
+      project: nwhacks-2019
+      on:
+        branch: dev
+  - stage: Deploy
+    script: yarn generate:prod && echo "cmdf.nwhacks.io" >> dist/CNAME
+    deploy:
+      provider: pages
+      skip_cleanup: true
+      github_token: "$GITHUB_TOKEN"
+      keep_history: true
+      local_dir: dist
+      on:
+        branch: master
 stages:
-  - "Lint, Test and Build"
-  - name: Staging
-    if: branch = dev
-  - name: Deploy
-    if: branch = master
+- Lint, Test and Build
+- name: Staging
+  if: branch = dev
+- name: Deploy
+  if: branch = master
