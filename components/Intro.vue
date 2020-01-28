@@ -74,7 +74,7 @@
           <img
             id="foreground-graphic"
             alt="A mountain and a lake"
-            src="../assets/graphics/foreground.svg"
+            src="../assets/graphics/foreground.png"
           >
         </kinesis-element>
       </div>
