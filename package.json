@@ -1,7 +1,7 @@
 {
   "name": "cmd-f2020",
   "version": "1.0.0",
-  "description": "An all-female* 24 hour hackathon, hosted at the University of British Columbia, where students will come together on a journey to innovate, inspire, and learn.",
+  "description": "British Columbia’s all-female* hackathon. Held March 7-8th, 2020 at UBC",
   "author": "nwPlus Dev Team",
   "private": true,
   "scripts": {
