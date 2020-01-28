@@ -3,7 +3,6 @@
     <p class="sponsor-title">
       Sponsors
     </p>
-    <BecomeSponsorButton />
     <br>
     <div id="sponsors-list" class="sponsorCategory">
       <div v-for="item in listOfTera" :key="item.name" class="sponsorWrapper">
@@ -31,6 +30,7 @@
       </div>
     </div>
     <!--  -->
+    <BecomeSponsorButton />
   </div>
 </template>
 
