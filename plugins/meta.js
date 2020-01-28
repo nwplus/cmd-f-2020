@@ -18,8 +18,8 @@ function meta({ route, html }) {
   // meta tags (fill in your info here / dynamic per route)
   const metaTags = {
     name: 'cmd-f 2020',
-    description: 'Western Canada\'s Largest Female only Hackathon',
-    image: 'https://www.nwhacks.io/thumbnail.png',
+    description: 'Vancouver’s all-female* hackathon',
+    image: 'https://cmd-f.nwhacks.io/thumbnail.png',
     url: 'https://cmd-f.nwhacks.io'
   }
 

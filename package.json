@@ -1,7 +1,7 @@
 {
-  "name": "nwHacks2020",
+  "name": "cmd-f2020",
   "version": "1.0.0",
-  "description": "nwHacks is the largest 24-hour hackathon in Western Canada, with more than 700 participants in 2019. Whether you're a seasoned hacker or a tech newbie, nwHacks welcomes you; just bring an open mind and an insatiable desire to learn, and we’ll take care of the rest.",
+  "description": "An all-female* 24 hour hackathon, hosted at the University of British Columbia, where students will come together on a journey to innovate, inspire, and learn.",
   "author": "nwPlus Dev Team",
   "private": true,
   "scripts": {
