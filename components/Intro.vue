@@ -9,8 +9,9 @@
             </h1>
           </div>
           <img
+            id="cmdf-logo"
             alt="cmd-f logo"
-            src="../assets/nwlogos/cmdf.svg"
+            src="../assets/nwlogos/cmdf.png"
           >
           <p><strong>March 07-08, 2020</strong></p>
           <p>Vancouver’s all-female* hackathon</p>
@@ -61,7 +62,7 @@
         >
           <img
             id="background-graphic"
-            alt="background graphic under about section"
+            alt="Person cheering on mountain"
             src="../assets/graphics/mountain-and-person.svg"
           >
         </kinesis-element>
@@ -72,8 +73,8 @@
         >
           <img
             id="foreground-graphic"
-            alt="foreground graphic under about section"
-            src="../assets/graphics/foreground.svg"
+            alt="A mountain and a lake"
+            src="../assets/graphics/foreground.png"
           >
         </kinesis-element>
       </div>
@@ -150,11 +151,13 @@ export default {
   position: absolute;
   transform: translateY(-45%);
   top: 5vh;
+  width: 100vw;
 }
 #foreground-graphic {
   position: absolute;
   transform: translateY(-35%);
   top: 5vh;
+  width: 100vw;
 }
 .subheader-content-body {
   font-family: 'Arapey';
@@ -194,9 +197,13 @@ export default {
   text-decoration: underline;
   color: #2F4246;
   transition-duration: 0.3s;
+  margin-bottom: 5px;
 }
 .header-content a:hover {
   color: #969D8D;
+}
+#cmdf-logo {
+  width: 7vw;
 }
 .visible {
   opacity: 1;
@@ -271,9 +278,11 @@ export default {
   }
   .intro-section {
     font-size: 16px;
+    line-height: 20px;
   }
   .header button {
     font-size: 16px;
+    line-height: 20px;
     width: 40vw;
     height: 36px;
     margin: 7px 0;
@@ -288,7 +297,7 @@ export default {
     padding: 25vw 0 0 4vw;
     width: 56vw;
   }
-  .header-content img {
+  #cmdf-logo {
     width: 15vw;
     margin-top: 8px;
     margin-bottom: 30px;
@@ -306,21 +315,35 @@ export default {
   font-size: 18px;
   margin: 20px auto;
   }
-#background-graphic {
-  top: 0vh;
-}
-#foreground-graphic {
-  top: 0vh;
-}
+  #background-graphic {
+    top: 0vh;
+  }
+  #foreground-graphic {
+    top: 0vh;
+  }
   .subheader-content-body {
     min-width: 275px;
     width: 80%;
     margin: 10px auto;
   }
-
   .subheader-content-body #acknowledgement {
     width: 100%;
     margin: 10px auto;
+  }
+}
+// end of life smol iphones
+@include until(323px) {
+  .mobile-h1 {
+    font-size: 28px;
+    line-height: 30px;
+  }
+  .header-content {
+    text-align: left;
+    padding: 20vw 0 0 3vw;
+    width: 56vw;
+  }
+  #cmdf-logo {
+    margin-bottom: 25px;
   }
 }
 </style>
