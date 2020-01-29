@@ -1,6 +1,6 @@
 <template>
   <div id="main-page" style="position: relative; width: 100%;">
-    <NavBar id="navbar" v-if="screenWidth > 768" :faq="faqFlag" />
+    <NavBar id="navbar" :faq="faqFlag" />
     <section id="mainSection">
       <div class="mainContent">
         <Intro id="intro" :intro="intro" />
