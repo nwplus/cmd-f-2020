@@ -53,12 +53,13 @@ export default {
 #scaledSection h3.title {
   margin-bottom: 12px; // #scaledSection to overwrite default 1.5rem
   text-align: center;
-  display: block;
+  width: 100%;
 }
 
 #scaledSection div.columns {
   display: flex;
   align-items: flex-start;
+  text-align: center;
 }
 
 .valuesText {
@@ -85,12 +86,12 @@ div.events.column {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
 }
 
 .image-container {
   max-width: 250px;
   max-height: 250px;
-  border: 2px solid blue;
   margin: 0 auto;
 }
 .image {
