@@ -15,7 +15,7 @@
           >
           <p><strong>March 07-08, 2020</strong></p>
           <p>Vancouver’s all-female* hackathon</p>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSf0C-8InaaZoTOhlZfowGVhg9R4UwKn4Pdvcw6si2oRGff9TA/viewform" rel="noopener" target="_blank"><button>Apply Now</button></a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSf0C-8InaaZoTOhlZfowGVhg9R4UwKn4Pdvcw6si2oRGff9TA/viewform" rel="noopener" target="_blank"><button class="hackerButton">Apply Now</button></a>
           <a v-if="mentorOpen" href="#">Interested in Mentoring?</a>
           <a v-if="volunteerOpen" href="#">I want to volunteer!</a>
         </div>
@@ -216,7 +216,7 @@ export default {
 .visible {
   opacity: 1;
 }
-.header button {
+.header .hackerButton {
   vertical-align: top;
   transition-duration: 0.3s;
   width: auto;
@@ -233,7 +233,7 @@ export default {
   font-size: 23px;
   color: #E9E8E0;
 }
-.header button:hover {
+.header .hackerButton:hover {
   background: #969D8D;
 }
 .subheader {
@@ -288,7 +288,7 @@ export default {
     font-size: 16px;
     line-height: 20px;
   }
-  .header button {
+  .header .hackerButton {
     font-size: 16px;
     line-height: 20px;
     width: 40vw;
