@@ -11,10 +11,12 @@
         <div
           class="events column"
         >
-          <img :src="item.imageLink" class="images">
-          <div class="title">
-            {{ item.title }}
+          <div class="image-container">
+            <img :src="item.imageLink" class="image">
           </div>
+          <h3 class="title">
+            {{ item.title }}
+          </h3>
           <p class="valuesText">
             {{ item.text }}
           </p>
@@ -48,8 +50,15 @@ export default {
   padding-top: 17%;
 }
 
-#scaledSection div.title {
+#scaledSection h3.title {
   margin-bottom: 12px; // #scaledSection to overwrite default 1.5rem
+  text-align: center;
+  display: block;
+}
+
+#scaledSection div.columns {
+  display: flex;
+  align-items: flex-start;
 }
 
 .valuesText {
@@ -73,11 +82,21 @@ div.columns {
 
 div.events.column {
   max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.images {
+.image-container {
   max-width: 250px;
   max-height: 250px;
+  border: 2px solid blue;
+  margin: 0 auto;
+}
+.image {
+  width: 80%;
+  height: 80%;
+  margin: 0 auto;
 }
 
 .title {
