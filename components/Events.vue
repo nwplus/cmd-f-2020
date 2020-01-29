@@ -58,6 +58,17 @@ export default {
   color: #2F4246;
 }
 
+div.columns {
+  align-items: center;
+  justify-content: space-between;
+  width: 84%;
+  margin: 0 auto;
+}
+
+div.events.column {
+  max-width: 300px;
+}
+
 .images {
   max-width: 250px;
   max-height: 250px;
