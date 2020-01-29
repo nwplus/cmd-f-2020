@@ -15,9 +15,9 @@
           >
           <p><strong>March 07-08, 2020</strong></p>
           <p>Vancouver’s all-female* hackathon</p>
-          <a><button>Apply Now</button></a>
-          <a href="#">Interested in Mentoring?</a>
-          <a href="#">I want to volunteer!</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSf0C-8InaaZoTOhlZfowGVhg9R4UwKn4Pdvcw6si2oRGff9TA/viewform" rel="noopener" target="_blank"><button>Apply Now</button></a>
+          <a v-if="mentorOpen" href="#">Interested in Mentoring?</a>
+          <a v-if="volunteerOpen" href="#">I want to volunteer!</a>
         </div>
       </div>
       <div class="subheader">
@@ -95,6 +95,14 @@ export default {
       default: () => {
         return false
       }
+    },
+    volunteerOpen: {
+      type: Boolean,
+      default: () => false
+    },
+    mentorOpen: {
+      type: Boolean,
+      default: () => false
     }
   },
   data: function () {
