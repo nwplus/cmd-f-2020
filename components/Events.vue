@@ -67,6 +67,7 @@ export default {
   font-size: 20px;
   line-height: 25px;
   color: #2F4246;
+  width: 80%;
 }
 
 .events {
@@ -76,16 +77,16 @@ export default {
 
 div.columns {
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   margin: 0 auto;
 }
 
 div.events.column {
-  max-width: 400px;
+  max-width: 375px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
 }
 
