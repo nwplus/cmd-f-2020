@@ -51,6 +51,13 @@ export default {
   padding: 0;
 }
 
+.events.column {
+  font-family: 'Arapey', serif;
+  font-size: 20px;
+  line-height: 25px;
+  color: #2F4246;
+}
+
 .images {
   max-width: 250px;
   max-height: 250px;
