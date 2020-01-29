@@ -15,7 +15,9 @@
           <div class="title">
             {{ item.title }}
           </div>
-          {{ item.text }}
+          <p class="valuesText">
+            {{ item.text }}
+          </p>
         </div>
       </div>
     </div>
@@ -46,27 +48,31 @@ export default {
   padding-top: 17%;
 }
 
-.events {
-  text-align: center;
-  padding: 0;
+#scaledSection div.title {
+  margin-bottom: 12px; // #scaledSection to overwrite default 1.5rem
 }
 
-.events.column {
+.valuesText {
   font-family: 'Arapey', serif;
   font-size: 20px;
   line-height: 25px;
   color: #2F4246;
 }
 
+.events {
+  text-align: center;
+  padding: 0;
+}
+
 div.columns {
   align-items: center;
   justify-content: space-between;
-  width: 84%;
+  width: 100%;
   margin: 0 auto;
 }
 
 div.events.column {
-  max-width: 300px;
+  max-width: 400px;
 }
 
 .images {
