@@ -117,7 +117,7 @@
           >
             Code of Conduct</a>
           <a
-            href="mailto:hello@nwplus.io?subject=Sponsorship"
+            href="mailto:sponsorship@nwplus.io?subject=Sponsorship"
           >Become a Sponsor</a>
         </p>
         <p class="copyright-text">
