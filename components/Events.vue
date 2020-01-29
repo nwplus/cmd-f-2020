@@ -106,7 +106,7 @@ div.events.column {
   font-style: normal;
   font-weight: 600;
   font-size: 28px;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 
 .headerText {
@@ -130,6 +130,20 @@ div.events.column {
   }
   .mainContainer {
     margin: 0% 10% 50px 10%;
+  }
+  #scaledSection div.columns {
+    flex-direction: column;
+  }
+  div.events.column {
+  max-width: 100%;
+  margin: 1.2em 0;
+}
+  .valuesText {
+    width: 100%;
+  }
+  .subText {
+    font-size: 18px;
+    line-height: 22px;
   }
 }
 </style>
