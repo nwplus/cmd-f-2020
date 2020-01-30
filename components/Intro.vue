@@ -17,7 +17,7 @@
           <p>Vancouver’s all-female* hackathon</p>
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSf0C-8InaaZoTOhlZfowGVhg9R4UwKn4Pdvcw6si2oRGff9TA/viewform" rel="noopener" target="_blank"><button class="hackerButton">Apply Now</button></a>
           <a v-if="mentorOpen" href="#">Interested in Mentoring?</a>
-          <a v-if="volunteerOpen" href="#">I want to volunteer!</a>
+          <a v-if="volunteerOpen" href="https://docs.google.com/forms/d/e/1FAIpQLSeT1GHNpahF8hYyJiEneFzazKCJddT9M72a_-jmGdInP6NLHw/viewform" rel="noopener" target="_blank">I want to volunteer!</a>
         </div>
       </div>
       <div class="subheader">
