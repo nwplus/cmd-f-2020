@@ -12,7 +12,7 @@
           class="events column"
         >
           <div class="image-container">
-            <img :src="item.imageLink" class="image">
+            <img :src="item.imageLink" :class="{smaller: isWomenSupportingWomen(item)}" class="image">
           </div>
           <h3 class="title">
             {{ item.title }}
@@ -38,6 +38,12 @@ export default {
   computed: {
     sortedEvents: function () {
       return orderBy(this.items, 'order')
+    }
+  },
+  methods: {
+    isWomenSupportingWomen(item) {
+      console.log('isWomenSupportingWomen', item)
+      return item.title === 'Women* Supporting Women*'
     }
   }
 }
@@ -91,14 +97,21 @@ div.events.column {
 }
 
 .image-container {
-  max-width: 250px;
-  max-height: 250px;
+  height: 250px;
+  width: 250px;
   margin: 0 auto;
 }
 .image {
   width: 80%;
   height: 80%;
-  margin: 0 auto;
+  margin: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.smaller {
+  width: 60%;
+  height: 60%;
 }
 
 .title {
