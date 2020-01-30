@@ -112,7 +112,7 @@ export default {
   },
   computed: {
     textParallaxStrength() {
-      return screen.width > 768 ? -350 : -150
+      return screen.width > 768 ? -350 : -100
     }
   },
 
