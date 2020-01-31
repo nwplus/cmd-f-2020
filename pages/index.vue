@@ -114,7 +114,7 @@ export default {
   width: 40%;
 }
 .bird-branch {
-  margin-left: 70%;
+  margin-left: 65.55%;
   margin-top: -5%;
   margin-bottom: -100px;
   width: 40%;
