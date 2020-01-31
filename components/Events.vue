@@ -11,11 +11,15 @@
         <div
           class="events column"
         >
-          <img :src="item.imageLink" class="images">
-          <div class="title">
-            {{ item.title }}
+          <div class="image-container">
+            <img :src="item.imageLink" :class="{smaller: isWomenSupportingWomen(item)}" class="image">
           </div>
-          {{ item.text }}
+          <h3 class="title">
+            {{ item.title }}
+          </h3>
+          <p class="valuesText">
+            {{ item.text }}
+          </p>
         </div>
       </div>
     </div>
@@ -35,6 +39,12 @@ export default {
     sortedEvents: function () {
       return orderBy(this.items, 'order')
     }
+  },
+  methods: {
+    isWomenSupportingWomen(item) {
+      console.log('isWomenSupportingWomen', item)
+      return item.title === 'Women* Supporting Women*'
+    }
   }
 }
 </script>
@@ -46,14 +56,62 @@ export default {
   padding-top: 17%;
 }
 
+#scaledSection h3.title {
+  margin-bottom: 12px; // #scaledSection to overwrite default 1.5rem
+  text-align: center;
+  width: 100%;
+}
+
+#scaledSection div.columns {
+  display: flex;
+  align-items: flex-start;
+  text-align: center;
+}
+
+.valuesText {
+  font-family: 'Arapey', serif;
+  font-size: 20px;
+  line-height: 25px;
+  color: #2F4246;
+  width: 80%;
+}
+
 .events {
   text-align: center;
   padding: 0;
 }
 
-.images {
-  max-width: 250px;
-  max-height: 250px;
+div.columns {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+div.events.column {
+  max-width: 375px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container {
+  height: 250px;
+  width: 250px;
+  margin: 0 auto;
+}
+.image {
+  width: 80%;
+  height: 80%;
+  margin: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.smaller {
+  width: 60%;
+  height: 60%;
 }
 
 .title {
@@ -61,7 +119,7 @@ export default {
   font-style: normal;
   font-weight: 600;
   font-size: 28px;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 
 .headerText {
@@ -85,6 +143,20 @@ export default {
   }
   .mainContainer {
     margin: 0% 10% 50px 10%;
+  }
+  #scaledSection div.columns {
+    flex-direction: column;
+  }
+  div.events.column {
+  max-width: 100%;
+  margin: 1.2em 0;
+}
+  .valuesText {
+    width: 100%;
+  }
+  .subText {
+    font-size: 18px;
+    line-height: 22px;
   }
 }
 </style>
