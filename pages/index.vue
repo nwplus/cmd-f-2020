@@ -3,7 +3,7 @@
     <NavBar id="navbar" :faq="faqFlag" />
     <section id="mainSection">
       <div class="mainContent">
-        <Intro id="intro" :intro="intro" />
+        <Intro id="intro" :intro="intro" :volunteerOpen="volunteerFlag" :mentorOpen="mentorFlag" />
         <div id="scaledSection">
           <Events id="events" :items="events" />
           <img src="~@/assets/branch.png" class="branch">
