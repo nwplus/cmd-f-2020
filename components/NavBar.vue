@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <nav :class="{navbar: true, visible: visible}" role="navigation" aria-label="main navigation">
+    <nav :style="{visibility: visible, opacity: opacity}" class="navbar" role="navigation" aria-label="main navigation">
       <a
         href="https://mlh.io/seasons/na-2020/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2020-season&utm_content=black"
         target="_blank"
@@ -19,13 +19,13 @@
             <a v-scroll-to="'#events'" href="#" class="navbar-item">About</a>
             <a v-if="faq" v-scroll-to="'#faq'" href="#" class="navbar-item">FAQ</a>
             <a v-scroll-to="'#sponza'" href="#" class="navbar-item">Sponsors</a>
-            <a href="https://2019.nwhacks.io/#/" rel="noopener" target="_blank" class="navbar-item">nwHacks 2019</a>
+            <a href="https://cmd-f.nwplus.io/" rel="noopener" target="_blank" class="navbar-item">2019</a>
           </div>
-          <a v-scroll-to="'#intro'" href="#" target="_blank" rel="noopener">
+          <a href="https://www.nwplus.io/" target="_blank" rel="noopener">
             <img
               id="navbar-logo"
               class="navbar-item"
-              src="~@/assets/nwlogos/nwHacks_Logo.svg"
+              src="~@/assets/nwlogos/nwplus-logo.png"
               alt="nwPlus logo"
             >
           </a>
@@ -45,7 +45,8 @@ export default {
   },
   data() {
     return {
-      visible: true,
+      visible: 'visible',
+      opacity: '1',
       scrollFunc: () => {}
     }
   },
@@ -58,17 +59,33 @@ export default {
   },
   methods: {
     handleScroll() {
-      let lastScroll = 0
-      return (event) => {
-        const scroll = window.pageYOffset || document.documentElement.scrollTop
-        if (scroll <= 0) {
-          this.visible = true
-        } else if (scroll > lastScroll) {
-          this.visible = false
-        } else {
-          this.visible = true
+      if (screen.width > 768) {
+        let lastScroll = 0
+        return (event) => {
+          const scroll = window.pageYOffset || document.documentElement.scrollTop
+          if (scroll <= 0) {
+            this.visible = 'visible'
+            this.opacity = '1'
+          } else if (scroll > lastScroll) {
+            this.visible = 'hidden'
+            this.opacity = '0'
+          } else {
+            this.visible = 'visible'
+            this.opacity = '1'
+          }
+          lastScroll = scroll
         }
-        lastScroll = scroll
+      } else {
+        return (event) => {
+          const scroll = window.pageYOffset || document.documentElement.scrollTop
+          if (scroll <= 80) {
+            this.visible = 'visible'
+            this.opacity = '1'
+          } else {
+            this.visible = 'hidden'
+            this.opacity = '0'
+          }
+        }
       }
     }
   }
@@ -79,42 +96,41 @@ export default {
 @import "bulma/bulma.sass";
 
 .navbar {
+  font-family: 'Zilla Slab', serif;
+  font-weight: bold;
   background: none;
   color: rgba(1, 1, 1, 0);
   position: fixed;
   top: 0%;
   width: 100%;
   padding: 0;
-  opacity: 0;
-  transition: 0.5s;
-}
-.visible {
-  opacity: 1;
+  visibility: visible;
+  transition: 0.5s ease-in-out;
 }
 .navbar-item {
-    display: inline-block;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 0px 32px;
-    color: #fff;
-    padding-top: 15px;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 0px 32px;
+  color: #2F4246;
+  padding-top: 15px;
 }
 .navbar-item::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #fff;
-    transition: width .3s;
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #2F4246;
+  transition: width .3s;
 }
 .navbar-item:hover::after {
-    width: 100%;
+  width: 100%;
 }
 a.navbar-item:hover,
 a.navbar-item:focus,
 a.navbar-item:focus-within {
   background: none;
-  color: #fff
+  color: #2F4246
 }
 .buttons {
   margin-right: 78px;

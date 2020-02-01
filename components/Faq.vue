@@ -1,18 +1,18 @@
 <template>
   <div class="container">
     <h1 class="faq-title">
-      Frequently Asked Questions
+      FAQ
     </h1>
     <div class="columns">
       <!-- Left column begin -->
       <div class="column is-half is-multiline">
         <!--  -->
         <p class="label">
-          🤔 General
+          General
         </p>
         <div v-for="item in sortedItems" :key="`General-${item.question}`">
           <div v-if="item.selected && item.category == 'General'">
-            <button class="accordion" @click="openSesame">
+            <button @click="openSesame" class="accordion">
               {{ item.question }}
             </button>
             <div class="panel">
@@ -27,11 +27,11 @@
       <div class="column is-half is-multiline">
         <!-- logistics start -->
         <p class="label">
-          💻 Teams &amp; Projects
+          Teams &amp; Projects
         </p>
         <div v-for="item in items" :key="`Teams-${item.question}`">
           <div v-if="item.selected && item.category == 'Teams'">
-            <button class="accordion" @click="openSesame">
+            <button @click="openSesame" class="accordion">
               {{ item.question }}
             </button>
             <div class="panel">
@@ -42,11 +42,11 @@
         <!-- logistics end -->
         <!-- logistics 2 start -->
         <p class="label">
-          🎒 Logistics
+          Logistics
         </p>
         <div v-for="item in items" :key="`Logistics-${item.question}`">
           <div v-if="item.selected && item.category == 'Logistics'">
-            <button class="accordion" @click="openSesame">
+            <button @click="openSesame" class="accordion">
               {{ item.question }}
             </button>
             <div class="panel">
@@ -98,9 +98,6 @@ export default {
 
 <style scoped lang="scss">
 @import "bulma/bulma.sass";
-@import url("https://fonts.googleapis.com/css?family=Caveat+Brush&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Apercu+Pro&display=swap");
-
 .container {
   width: 90%;
   margin: 0 auto;
@@ -109,8 +106,8 @@ export default {
   margin-top: 5%;
 }
 .faq-title {
-  font-family: Apercu Pro;
-  font-size: 36px;
+  font-family: 'Zilla Slab', serif;
+  font-size: 48px;
   line-height: 37px;
   font-weight: bold;
   letter-spacing: 0.05em;
@@ -118,45 +115,47 @@ export default {
   background-clip: text !important;
   color: transparent;
   -webkit-text-fill-color: transparent;
-  background: -webkit-linear-gradient(180deg, #91e9ee 0%, #06c1c0 100%);
+  background: #2F4246;
   margin-bottom: 3%;
   text-align: center;
 }
 .label {
-  font-family: "Apercu Pro";
-  color: #f9c2e3;
-  font-size: 20px;
+  font-family: 'Zilla Slab', serif;
+  color: #8ABAB5;
+  font-weight: 600;
+  font-size: 36px;
+  margin-top: 15px;
 }
 //Desktop CSS:
 button.accordion {
   background-color: transparent;
-  color: #06c1c0;
-  // background: -webkit-linear-gradient(180deg, #91e9ee 0%, #06c1c0 100%);
-  // background-clip: text;
-  // -webkit-text-fill-color: transparent;
-  // -webkit-text-stroke: 1px rgb(0, 0, 0);
-
+  color: #2F4246;
+  border-radius: 12px;
   cursor: pointer;
   padding: 18px;
   width: 93%;
-  // transition: 0.3s;
   margin: 10px auto;
   text-align: left;
   outline: none;
-  border: 2px solid #06c1c0;
-  // border-width: 3px;
-  // border-image: -webkit-linear-gradient(180deg, #91E9EE 0%, #06C1C0 100%);
-  border-radius: 5px;
-  font-size: 18px;
-  font-family: "Apercu Pro";
-  font-weight: bold;
+  border: 2px solid #2F4246;
+  font-size: 20px;
+  font-family: 'Arapey', serif;
   @include until($desktop) {
     width: 100%;
   }
 }
 
 button.accordion:after {
+  content: url("~@/assets/arrow.svg");
   float: right;
+}
+
+button.accordion:after {
+  float: right;
+}
+
+button.accordion.active:after {
+  content: url("~@/assets/upside-down-arrow.svg");
 }
 
 button.accordion.active {
@@ -166,24 +165,18 @@ button.accordion.active {
   margin-bottom: 0px;
 }
 
-button.accordion.active:after {
-}
 .panel {
   padding: 18px;
   padding-top: 0;
-  // background-color: white;
-  background: -webkit-linear-gradient(180deg, #91e9ee 0%, #06c1c0 100%);
+  background: white;
   background-clip: text;
-  color: #06c1c0;
-  // -webkit-background-clip: text;
-  // -webkit-text-fill-color: transparent;
-  // image-rendering: -webkit-optimize-contrast;
+  color: #2F4246;
   display: none;
   overflow: hidden;
-  border: 2px solid #06c1c0;
+  border: 2px solid #2F4246;
   border-top: none;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
   margin: 0 0;
   margin-bottom: 2%;
   width: 93%;

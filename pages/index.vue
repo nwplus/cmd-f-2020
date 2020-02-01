@@ -1,12 +1,16 @@
 <template>
   <div id="main-page" style="position: relative; width: 100%;">
-    <NavBar v-if="screenWidth > 768" id="navbar" :faq="faqFlag" />
-    <section class="mainSection">
+    <NavBar id="navbar" :faq="faqFlag" />
+    <section id="mainSection">
       <div class="mainContent">
-        <Intro id="intro" :intro="intro" />
-        <Events id="events" :items="events" />
-        <FAQ v-if="faqFlag" id="faq" :items="FAQs" />
-        <Sponza v-if="sponsorFlag" id="sponza" :items="sponsors" />
+        <Intro id="intro" :intro="intro" :volunteerOpen="volunteerFlag" :mentorOpen="mentorFlag" />
+        <div id="scaledSection">
+          <Events id="events" :items="events" />
+          <img src="~@/assets/branch.png" class="branch">
+          <FAQ id="faq" v-if="faqFlag" :items="FAQs" />
+          <img src="~@/assets/birdAndBranch.png" class="bird-branch">
+          <Sponza id="sponza" v-if="sponsorFlag" :items="sponsors" />
+        </div>
       </div>
     </section>
     <Footer :text="footer" />
@@ -79,10 +83,53 @@ export default {
 @import "bulma/bulma.sass";
 //Desktop CSS:
 @font-face {
-  font-family: "Apercu Pro";
-  src: url("../assets/fonts/apercu_regular_pro.otf") format("opentype");
+  font-family: "Zilla Slab";
+  src: url(https://fonts.gstatic.com/s/zillaslab/v5/dFa6ZfeM_74wlPZtksIFajo6_Q.woff2)
+    format("woff2");
+}
+@font-face {
+  font-family: "Arapey";
+  src: url(https://fonts.gstatic.com/s/arapey/v8/-W__XJn-UDDA2RCKYNod.woff2)
+    format("woff2");
+}
+#scaledSection {
+  @include from($tablet) {
+    transform: scale(0.9);
+  }
 }
 #main-page {
   background-color: #e9e8e0;
+}
+@include from($tablet) {
+  #mainSection {
+    margin: auto;
+  }
+}
+.branch-image-container {
+  position: relative;
+}
+.branch {
+  margin-left: -10%;
+  margin-top: -8%;
+  width: 40%;
+}
+.bird-branch {
+  margin-left: 65.55%;
+  margin-top: -5%;
+  margin-bottom: -100px;
+  width: 40%;
+}
+//Mobile CSS:
+@include until($tablet) {
+  .branch {
+    margin-left: 0;
+    width: 60%;
+  }
+  .bird-branch {
+    margin-left: 40%;
+    width: 60%;
+    margin-top: 0px;
+    margin-bottom: 0;
+  }
 }
 </style>
