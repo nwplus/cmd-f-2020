@@ -4,10 +4,10 @@ import 'firebase/storage'
 import 'firebase/analytics'
 if (!firebase.apps.length) {
   const config = {
-    apiKey: "AIzaSyBppAYPBZ6WxWdErM3smh6t9BEJPUM_NHU",
+    apiKey: 'AIzaSyBppAYPBZ6WxWdErM3smh6t9BEJPUM_NHU',
     authDomain: process.env.FIREBASE_AUTH_DOMAIN,
     databaseURL: process.env.FIREBASE_DATABASE_URL,
-    projectId: "nwhacks-2019-dev",
+    projectId: 'nwhacks-2019-dev',
     storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
     messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
     measurementId: 'G-CL002TYWPV',
