@@ -18,7 +18,7 @@ if (!firebase.apps.length) {
 const db = firebase.firestore()
 const storage = firebase.storage()
 const webCollection = 'Website_content'
-const WebDocument = process.env.WEBSITE_NAME
+const WebDocument = 'cmd-f_2020'
 firebase.analytics()
 
 const fireDb = {
