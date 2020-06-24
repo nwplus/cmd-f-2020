@@ -4,10 +4,10 @@ import 'firebase/storage'
 import 'firebase/analytics'
 if (!firebase.apps.length) {
   const config = {
-    apiKey: 'AIzaSyBppAYPBZ6WxWdErM3smh6t9BEJPUM_NHU',
+    apiKey: process.env.FIREBASE_API_KEY,
     authDomain: process.env.FIREBASE_AUTH_DOMAIN,
     databaseURL: process.env.FIREBASE_DATABASE_URL,
-    projectId: 'nwhacks-2019-dev',
+    projectId: process.env.FIREBASE_PROJECT_ID,
     storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
     messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
     measurementId: 'G-CL002TYWPV',
@@ -18,7 +18,7 @@ if (!firebase.apps.length) {
 const db = firebase.firestore()
 const storage = firebase.storage()
 const webCollection = 'Website_content'
-const WebDocument = 'cmd-f_2020'
+const WebDocument = process.env.WEBSITE_NAME
 firebase.analytics()
 
 const fireDb = {
