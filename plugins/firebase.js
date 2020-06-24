@@ -4,7 +4,7 @@ import 'firebase/storage'
 import 'firebase/analytics'
 if (!firebase.apps.length) {
   const config = {
-    apiKey: process.env.FIREBASE_API_KEY,
+    apiKey: "AIzaSyBppAYPBZ6WxWdErM3smh6t9BEJPUM_NHU",
     authDomain: process.env.FIREBASE_AUTH_DOMAIN,
     databaseURL: process.env.FIREBASE_DATABASE_URL,
     projectId: "nwhacks-2019-dev",
