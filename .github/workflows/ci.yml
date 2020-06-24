@@ -18,7 +18,7 @@ jobs:
         run: |
           yarn install
           yarn lint
-          yarn build
+          yarn generate:prod
       - name: run Lighthouse CI
         run: |
           sudo yarn global add @lhci/cli@0.4.x
