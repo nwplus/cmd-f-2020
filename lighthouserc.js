@@ -4,7 +4,7 @@ module.exports = {
       url: ['http://localhost:3000/'],
       startServerCommand: 'yarn start'
     },
-    // leaving assertions out until other problems are fixed
+    // leaving assertions out until other problems are fixed.
     // assert: {
     //   preset: 'lighthouse:recommended'
     // },
