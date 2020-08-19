@@ -32,7 +32,7 @@
               alt="cmd-f logo in white"
               src="../assets/nwlogos/cmdf-white.svg"
             >
-            <p>Join us on International Women*'s Day at British Columbia's first and largest all-female* hackathon to explore new technologies and celebrate women* in tech.</p>
+            <p>Join us on International Women*'s Day at British Columbia's first and largest all-female* hackathon to explore new technologies and celebrate women* in tech!</p>
           </kinesis-element>
         </div>
         <div class="subheader-content-body">
