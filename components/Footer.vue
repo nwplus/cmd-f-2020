@@ -4,7 +4,7 @@
       nwPlus is always looking for new ventures, opportunities, and connections.
       If you are interested in working with us, joining us or speaking at one of
       our events, feel free to reach out to us at
-      <a class="mail-to" href="mailto:hello@nwplus.io">hello@nwplus.io</a>
+      <a class="mail-to" href="mailto:info@nwplus.io">info@nwplus.io</a>
     </p>
     <div class="moon-stars">
       <img class="moon" src="~@/assets/moon.svg" alt="">
@@ -109,7 +109,7 @@
           </a>
         </p>
         <p class="links">
-          <a href="mailto:hello@nwplus.io">Email Us</a>
+          <a href="mailto:info@nwplus.io">Email Us</a>
           <a
             href="http://mlh.io/code-of-conduct"
             target="_blank"
