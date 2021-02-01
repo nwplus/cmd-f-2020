@@ -13,9 +13,9 @@
             alt="cmd-f logo"
             src="../assets/nwlogos/cmdf.png"
           >
-          <p><strong>March 07-08, 2020</strong></p>
-          <p>Vancouver’s all-female* hackathon</p>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSf0C-8InaaZoTOhlZfowGVhg9R4UwKn4Pdvcw6si2oRGff9TA/viewform" rel="noopener" target="_blank"><button class="hackerButton">Apply Now</button></a>
+          <p><strong>March 6-7, 2021</strong></p>
+          <p>Check back in Feb for more information!</p>
+          <a href="https://linktr.ee/nwplusubc" rel="noopener" target="_blank"><button class="hackerButton">Keep in Touch</button></a>
           <a v-if="mentorOpen" href="https://docs.google.com/forms/d/e/1FAIpQLScAldaf6ABAEI6rVNH6xjjmuBr_dq6fQFviKxMyTURNeV696g/viewform" rel="noopener" target="_blank">Interested in Mentoring?</a>
           <a v-if="volunteerOpen" href="https://docs.google.com/forms/d/e/1FAIpQLSeT1GHNpahF8hYyJiEneFzazKCJddT9M72a_-jmGdInP6NLHw/viewform" rel="noopener" target="_blank">I want to volunteer!</a>
         </div>
@@ -32,7 +32,7 @@
               alt="cmd-f logo in white"
               src="../assets/nwlogos/cmdf-white.svg"
             >
-            <p>Join us on International Women*'s Day at British Columbia's first and largest all-female* hackathon to explore new technologies and celebrate women* in tech!</p>
+            <p>Join us on International Women*'s Day at British Columbia's largest all-women* hackathon to explore new technologies and celebrate women* in tech!</p>
           </kinesis-element>
         </div>
         <div class="subheader-content-body">
