@@ -18,7 +18,6 @@ export default {
   },
   methods: {
     formatURL(url) {
-      console.log(this.item.altImage)
       if (!url.includes('http')) {
         return `http://${url}`
       } else {

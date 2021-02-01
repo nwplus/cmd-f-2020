@@ -42,7 +42,6 @@ export default {
   },
   methods: {
     isWomenSupportingWomen(item) {
-      console.log('isWomenSupportingWomen', item)
       return item.title === 'Women* Supporting Women*'
     }
   }
